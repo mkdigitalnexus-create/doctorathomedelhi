@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Doctor profile placeholder illustration">
+  <rect width="400" height="400" fill="#EAF0F8"/>
+  
+  <path d="M52 400 C52 318 112 268 200 268 C288 268 348 318 348 400 Z" fill="#FFFFFF"/>
+  <path d="M170 270 L200 326 L230 270 Z" fill="#102A56" opacity=".9"/>
+  <rect x="184" y="222" width="32" height="52" rx="14" fill="#D1A07A"/>
+  <ellipse cx="200" cy="170" rx="58" ry="66" fill="#D1A07A"/>
+  <path d="M138 142 C134 92 164 78 200 78 C238 78 266 96 262 142 C246 116 156 116 138 142 Z" fill="#2B2B30"/>
+  <path d="M146 300 C140 340 160 362 188 362 C214 362 226 344 226 320" fill="none" stroke="#102A56" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="226" cy="322" r="10" fill="#102A56"/>
+</svg>

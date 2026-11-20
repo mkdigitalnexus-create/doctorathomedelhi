@@ -1,0 +1,320 @@
+/**
+ * Central location data.
+ * ----------------------------------------------------------------------------
+ * Add a new city by adding an object to `cities`; add a neighbourhood by adding
+ * an object to `localities`. Routes, sitemap, selectors, footer links, SEO
+ * metadata and prerendering all derive from this file.
+ *
+ * NOTE: neighbourhood listings show where enquiries are welcome. Exact
+ * availability for any address is always subject to confirmation by our team.
+ */
+
+const PRICE = '₹699'
+
+export const cities = [
+  {
+    slug: 'delhi',
+    name: 'Delhi',
+    shortDescription:
+      'Doctor home visits for colonies and apartments across West, North, East and South Delhi.',
+    seoTitle: `Doctor at Home in Delhi | 24/7 Home Visit Starting ${PRICE}`,
+    metaDescription: `Book a qualified MBBS/MD doctor at home in Delhi. Home visit doctor in West, North, East and South Delhi, available 24/7 from ${PRICE}. Call to check availability.`,
+    h1: 'Doctor at Home in Delhi – Qualified Doctors at Your Doorstep',
+    heroSubtitle: `Home visit doctor in Delhi from ${PRICE}. Bookings open 24/7.`,
+    intro: [
+      'Getting across Delhi to a clinic can mean heavy traffic, long waiting rooms and a tiring journey for someone who is already unwell. Doctor At Home brings a qualified MBBS/MD doctor to your living room instead, so that you can be examined, ask questions and receive advice in familiar surroundings.',
+      'We take requests from homes across the four broad regions of the capital – West, North, East and South Delhi – and from the neighbourhoods listed below. Because the city is large and travel times vary by the hour, our team confirms the visit window and doctor availability for your exact address before anything is finalised.',
+    ],
+    whyHeading: 'Why Delhi families choose a home visit',
+    whyPoints: [
+      { title: 'Skip the traffic', text: 'No cross-city commute when someone has a fever, back-to-back infections or is simply too weak to travel.' },
+      { title: 'Easier for senior citizens', text: 'Many older Delhi colonies have stairs and no lift. A doctor who visits removes that barrier for elderly parents.' },
+      { title: 'Late-night & early-morning requests', text: 'Bookings are open 24/7, so you can request a visit when regular clinics have closed.' },
+    ],
+    commonNeeds: [
+      'Fever, cough, cold and seasonal infections',
+      'Blood pressure and sugar review for elderly family members',
+      'Follow-up consultation after hospital discharge',
+      'Injections and simple procedures prescribed by a doctor',
+    ],
+    regionsNote:
+      'Delhi neighbourhoods we take enquiries from are grouped by region below. If your colony is not listed, still send a request – we will tell you honestly whether we can reach you.',
+    faqs: [
+      { q: 'Which parts of Delhi can I request a doctor home visit in?', a: 'You can request a visit from addresses across West, North, East and South Delhi, including neighbourhoods such as Rohini, Pitampura, Karol Bagh, Hauz Khas and Krishna Nagar. Final availability depends on your exact address and the time of the request, and our team confirms it before the visit.' },
+      { q: 'What is the starting fee for a doctor visit in Delhi?', a: `Doctor home visits in Delhi start at ${PRICE}. The final amount can depend on the service you need and the time of the visit – our team shares the details when confirming your appointment.` },
+      { q: 'Can I book at night in Delhi?', a: 'Bookings are open 24/7. Visit timing at night depends on doctor availability near your location, so please call or message us to check how soon a doctor can reach you.' },
+      { q: 'Can I book a visit for my parents who live in Delhi while I stay elsewhere?', a: 'Yes. Share your parent’s home address, their age and a short description of the problem, along with your own contact number. We will coordinate the visit details with you.' },
+    ],
+    nearby: ['gurgaon', 'noida', 'ghaziabad', 'faridabad'],
+    skyline: { landmark: 'arch', buildings: [34, 52, 28, 60, 40, 72, 36, 48, 30] },
+  },
+  {
+    slug: 'gurgaon',
+    name: 'Gurgaon',
+    shortDescription:
+      'Home visits for high-rise societies, gated communities and working families in Gurgaon.',
+    seoTitle: `Doctor at Home in Gurgaon | 24/7 Home Visit Starting ${PRICE}`,
+    metaDescription: `Book a qualified MBBS/MD doctor at home in Gurgaon. Doctor home visits available 24/7, starting at ${PRICE}. Call to check service availability.`,
+    h1: 'Doctor at Home in Gurgaon – Qualified Doctors at Your Doorstep',
+    heroSubtitle: `Doctor home visit in Gurgaon from ${PRICE}, with bookings open round the clock.`,
+    intro: [
+      'Gurgaon’s skyline of gated societies and tall residential towers is home to busy professionals, young families and parents who have moved in to be close to their children. When a family member falls ill after office hours, the nearest clinic may be across a congested road, and leaving a child or an unwell parent alone is not always possible.',
+      'Doctor At Home sends a qualified MBBS/MD doctor to your flat or villa for a consultation, so you can get medical advice without arranging a car, parking or a long wait. Share your society name, tower and gate details when you book – this helps us confirm the visit quickly and guide the doctor to the right entrance.',
+    ],
+    whyHeading: 'Why home visits suit Gurgaon households',
+    whyPoints: [
+      { title: 'Built for working schedules', text: 'Request a visit in the evening or late night, after office hours, when you cannot take time away from work for a clinic trip.' },
+      { title: 'Gated-society friendly', text: 'Share your tower, flat number and gate instructions and we pass them on, so the doctor can be received without confusion at the entrance.' },
+      { title: 'Care for parents living with you', text: 'Elderly family members can have blood pressure, sugar and routine health concerns reviewed at home instead of travelling.' },
+    ],
+    commonNeeds: [
+      'Fever, viral infections and stomach upsets in children and adults',
+      'Routine review for family members with blood pressure or diabetes',
+      'Evening and late-night consultations when clinics are closed',
+      'Home blood tests when prescribed by a doctor',
+    ],
+    regionsNote:
+      'We take enquiries from residential sectors, DLF phases, Golf Course Road, Sohna Road and surrounding societies. Please share your society and sector so we can confirm coverage for your address.',
+    faqs: [
+      { q: 'Is a doctor home visit available in my Gurgaon society?', a: 'Many Gurgaon addresses can be served, but availability depends on the doctor’s location and the time you need the visit. Send your society name, sector and flat details and we will confirm whether we can reach you.' },
+      { q: 'How much does a doctor home visit cost in Gurgaon?', a: `Doctor home visits in Gurgaon start at ${PRICE}. Our team confirms the final details for your service and visit time when your appointment is arranged.` },
+      { q: 'Can the doctor visit after office hours?', a: 'Bookings are open 24/7, and we try to arrange visits in the evening and at night wherever a doctor is available near you. Call or WhatsApp us to check the earliest possible time.' },
+      { q: 'What should I keep ready before the doctor arrives?', a: 'Keep any previous prescriptions, test reports and a list of current medicines handy, along with your society gate pass or visitor instructions so the doctor can enter without delay.' },
+    ],
+    nearby: ['delhi', 'faridabad', 'noida'],
+    skyline: { buildings: [70, 96, 58, 110, 80, 124, 66, 100, 76, 90] },
+  },
+  {
+    slug: 'noida',
+    name: 'Noida',
+    shortDescription:
+      'Sector-wise home doctor visits for apartments and independent homes across Noida.',
+    seoTitle: `Doctor at Home in Noida | 24/7 Home Visit Starting ${PRICE}`,
+    metaDescription: `Looking for a doctor at home in Noida? Book a qualified MBBS/MD doctor home visit in Noida sectors, available 24/7 and starting at ${PRICE}. Call to confirm availability.`,
+    h1: 'Doctor at Home in Noida – Qualified Doctors at Your Doorstep',
+    heroSubtitle: `Home visit doctor in Noida from ${PRICE} – request any time of day or night.`,
+    intro: [
+      'Noida is laid out in numbered sectors, and many residents live in apartment societies where visitors need to be registered at the gate. A fever at midnight or an elderly parent who cannot manage the stairs to a clinic is exactly the situation a home visit is designed for.',
+      'Request a doctor and tell us your sector, society and tower. Our team checks which doctor can reach your address, confirms the visit window and shares what to expect. A qualified MBBS/MD doctor then comes to your home, examines the patient and explains the next steps in plain language.',
+    ],
+    whyHeading: 'What makes home visits practical in Noida',
+    whyPoints: [
+      { title: 'Sector-wise coordination', text: 'Tell us your sector and society and we work out the visit logistics around your address instead of asking you to travel.' },
+      { title: 'Parents living alone', text: 'Families whose children work in other cities can arrange a doctor visit for parents at home and stay in touch with the team.' },
+      { title: 'One clear starting price', text: `Doctor visits begin at ${PRICE}, so you know where you stand before you book.` },
+    ],
+    commonNeeds: [
+      'General physician consultation for adults and children',
+      'Fever, throat infection and flu symptoms',
+      'Elderly care and routine blood pressure checks',
+      'Injection administration and sample collection when prescribed',
+    ],
+    regionsNote:
+      'We take requests from sectors across Noida including residential sectors near the Noida Expressway and Sector 18 area. Give us your sector number and society so we can confirm availability.',
+    faqs: [
+      { q: 'Can I book a doctor home visit in my Noida sector?', a: 'You can send a request from any Noida sector. We confirm whether a doctor can reach your address, and at what time, after you share your sector, society and flat details.' },
+      { q: 'Do you provide a doctor at home in Noida at night?', a: 'Bookings are open 24/7. Night visits depend on doctor availability close to your sector, so contact us to find out how soon someone can come.' },
+      { q: 'Is a general physician available for home visits in Noida?', a: 'Yes, a general physician consultation is among our core services. The doctor will examine the patient, discuss symptoms and advise on treatment or further tests.' },
+      { q: 'What does a home visit in Noida cost?', a: `The starting fee is ${PRICE}. We confirm the details of the service and timing with you when arranging the appointment.` },
+    ],
+    nearby: ['greater-noida', 'ghaziabad', 'delhi'],
+    skyline: { buildings: [48, 80, 60, 98, 52, 86, 70, 64, 90] },
+  },
+  {
+    slug: 'greater-noida',
+    name: 'Greater Noida',
+    shortDescription:
+      'Doctor home visits for Alpha I, Gaur City and other Greater Noida societies.',
+    seoTitle: `Doctor at Home in Greater Noida | 24/7 Visit Starting ${PRICE}`,
+    metaDescription: `Book a doctor at home in Greater Noida, including Alpha I and Gaur City. Qualified MBBS/MD doctors, home visits 24/7 from ${PRICE}. Call to check availability.`,
+    h1: 'Doctor at Home in Greater Noida – Qualified Doctors at Your Doorstep',
+    heroSubtitle: `Greater Noida home visits from ${PRICE}, with bookings open 24/7.`,
+    intro: [
+      'Greater Noida is spread out. Large townships such as Gaur City and established sectors like Alpha I can sit several kilometres from the nearest multi-speciality clinic, which makes a quick visit for a child’s fever or an elder’s check-up harder than it should be.',
+      'Doctor At Home arranges a qualified MBBS/MD doctor to visit your residence for a consultation. Because distances here are longer than in compact city neighbourhoods, we confirm travel time and availability for your society before we fix the visit, and we are upfront if a time slot is not possible.',
+    ],
+    whyHeading: 'Home visits in a spread-out city',
+    whyPoints: [
+      { title: 'Less travel for big townships', text: 'Residents of large societies avoid long drives to a clinic, especially with young children or elderly parents.' },
+      { title: 'Honest time estimates', text: 'We confirm how long a doctor will take to reach your society rather than promising a fixed arrival time.' },
+      { title: 'Support for families new to the area', text: 'If you have recently moved and do not yet have a family doctor nearby, a home visit is a simple way to get medical advice.' },
+    ],
+    commonNeeds: [
+      'Fever, viral infections and seasonal illness',
+      'Paediatric consultation for young children',
+      'Follow-up visits and routine review for elders',
+      'Prescribed injections and home blood sample collection',
+    ],
+    regionsNote:
+      'Neighbourhoods currently listed include Alpha I and Gaur City. Residents of other societies in Greater Noida can also send a request and we will confirm whether we can reach you.',
+    faqs: [
+      { q: 'Do you offer doctor home visits in Gaur City?', a: 'Gaur City is one of the neighbourhoods we take enquiries from. Share your Gaur City society, tower and flat number and our team will confirm availability and timing.' },
+      { q: 'Can I request a doctor at home in Alpha I, Greater Noida?', a: 'Yes, Alpha I is on our list of neighbourhoods. Please send your house or block details so that we can confirm a doctor can visit at your preferred time.' },
+      { q: 'How long will the doctor take to reach Greater Noida homes?', a: 'Travel time depends on where the doctor is when your request arrives. We do not promise a fixed arrival time – our team shares an estimate when confirming your appointment.' },
+      { q: 'What is the starting fee in Greater Noida?', a: `A doctor home visit starts at ${PRICE}. Details specific to your visit are confirmed when we arrange the appointment.` },
+    ],
+    nearby: ['noida', 'ghaziabad', 'faridabad'],
+    skyline: { buildings: [40, 64, 52, 82, 46, 70, 58, 76] },
+  },
+  {
+    slug: 'ghaziabad',
+    name: 'Ghaziabad',
+    shortDescription:
+      'Home doctor visits for Brij Vihar, Sahibabad, Siddharth Vihar and nearby Ghaziabad colonies.',
+    seoTitle: `Doctor at Home in Ghaziabad | 24/7 Visit Starting ${PRICE}`,
+    metaDescription: `Qualified MBBS/MD doctor at home in Ghaziabad – Siddharth Vihar, Sahibabad, Brij Vihar and nearby. Home visits available 24/7 from ${PRICE}. Call to confirm availability.`,
+    h1: 'Doctor at Home in Ghaziabad – Qualified Doctors at Your Doorstep',
+    heroSubtitle: `Doctor home visit in Ghaziabad from ${PRICE}. Request a visit any hour of the day.`,
+    intro: [
+      'Ghaziabad sits on the Delhi–Uttar Pradesh border, and its mix of older colonies, busy market lanes and newer apartment townships means no single clinic is convenient for everyone. A home visit takes the doctor to the patient, wherever in the city they live.',
+      'Whether you are on the Delhi border side, in an apartment society off a highway or in a dense residential colony, you can request a qualified MBBS/MD doctor through us. Tell us your colony, landmark and floor, and our team confirms who can reach you and when.',
+    ],
+    whyHeading: 'Why home visits help in Ghaziabad',
+    whyPoints: [
+      { title: 'Works for dense colonies and townships alike', text: 'Narrow lanes or large apartment complexes – share the landmark and we plan the visit around your address.' },
+      { title: 'A family doctor option', text: 'If you do not have a regular doctor close by, a home consultation gives you a qualified opinion without the search.' },
+      { title: 'Convenient for the whole family', text: 'Children, working adults and elders can all be seen at home in a single visit when the doctor is available.' },
+    ],
+    commonNeeds: [
+      'Fever, cough, viral infections and weakness',
+      'General physician review for adults',
+      'Care for elderly parents who find travel difficult',
+      'Home sample collection for blood tests',
+    ],
+    regionsNote:
+      'We list Brij Vihar, Lajpat Nagar (Sahibabad) and Siddharth Vihar below. If you live elsewhere in Ghaziabad, send your area and landmark and we will confirm coverage.',
+    faqs: [
+      { q: 'Is a doctor at home available in Siddharth Vihar, Ghaziabad?', a: 'Siddharth Vihar is one of the areas we take enquiries from. Send your society name, tower and flat details and we will confirm whether a doctor can visit at your preferred time.' },
+      { q: 'Do you cover Sahibabad and Lajpat Nagar in Ghaziabad?', a: 'Yes, Lajpat Nagar in Sahibabad is on our locality list. Availability depends on the time and your exact address, which our team confirms before the visit.' },
+      { q: 'What can the doctor do at home in Ghaziabad?', a: 'The doctor can take a history, perform a basic physical examination, advise on treatment, and recommend tests or hospital care if needed. Services are not a replacement for emergency care.' },
+      { q: 'How much is the consultation fee in Ghaziabad?', a: `Home visits start at ${PRICE}. Final details are confirmed by our team when arranging your visit.` },
+    ],
+    nearby: ['delhi', 'noida', 'greater-noida'],
+    skyline: { buildings: [38, 56, 44, 70, 50, 62, 40, 78, 46] },
+  },
+  {
+    slug: 'faridabad',
+    name: 'Faridabad',
+    shortDescription:
+      'Doctor home visits for sectors, NIT and Greater Faridabad neighbourhoods.',
+    seoTitle: `Doctor at Home in Faridabad | 24/7 Home Visit Starting ${PRICE}`,
+    metaDescription: `Book an MBBS/MD doctor at home in Faridabad – old Faridabad, NIT, sectors and Greater Faridabad. Home visits available 24/7 from ${PRICE}. Call to check availability.`,
+    h1: 'Doctor at Home in Faridabad – Qualified Doctors at Your Doorstep',
+    heroSubtitle: `Faridabad doctor home visit from ${PRICE}. Bookings open 24/7.`,
+    intro: [
+      'Faridabad is a large industrial and residential city, with established areas like NIT and the older sectors on one side and newer residential pockets towards Greater Faridabad on the other. Families here often balance shift work, business hours and caring for elderly relatives.',
+      'Doctor At Home lets you request a qualified MBBS/MD doctor to visit your house when travelling to a clinic is inconvenient – after a long shift, when a child is unwell, or when a parent cannot manage the journey. Share your sector or colony and a landmark, and we will confirm the visit details with you.',
+    ],
+    whyHeading: 'What home visits offer Faridabad residents',
+    whyPoints: [
+      { title: 'Fits shift-based routines', text: 'Request a visit outside regular clinic timings if you work shifts or run a business.' },
+      { title: 'Easier for multi-generation homes', text: 'Doctors can see several family members in one home visit when time and scope allow, saving separate trips.' },
+      { title: 'Clear starting price', text: `Visits start at ${PRICE}, with final details shared when the appointment is arranged.` },
+    ],
+    commonNeeds: [
+      'General physician consultation at home',
+      'Fever, infections and seasonal illness in all ages',
+      'Elderly care and routine monitoring',
+      'Injections and sample collection when prescribed',
+    ],
+    regionsNote:
+      'We take enquiries from sectors across Faridabad, NIT, Old Faridabad and Greater Faridabad. Please share your sector or colony name and a nearby landmark.',
+    faqs: [
+      { q: 'Can I book a doctor at home in Faridabad NIT or the sectors?', a: 'You can send a request from any Faridabad area, including NIT and numbered sectors. Our team confirms whether a doctor can reach your address and when.' },
+      { q: 'Do you offer 24/7 doctor visits in Faridabad?', a: 'Bookings are open 24/7. The timing of the visit depends on doctor availability near your location, and our team will tell you honestly what is possible.' },
+      { q: 'Can a doctor visit my elderly parent in Faridabad?', a: 'Yes. You can arrange an elderly care consultation at home. Please share age, current health concerns and any recent reports when you book.' },
+      { q: 'What is the starting price of a home visit in Faridabad?', a: `Home visits begin at ${PRICE}. The team confirms the final fee for your service and visit time during booking.` },
+    ],
+    nearby: ['delhi', 'gurgaon', 'greater-noida'],
+    skyline: { buildings: [36, 48, 60, 44, 66, 52, 40, 58] },
+  },
+]
+
+export const delhiRegions = [
+  { name: 'West Delhi', slugs: ['bali-nagar', 'karol-bagh', 'mansarover-garden', 'palam', 'paschim-vihar', 'punjabi-bagh'] },
+  { name: 'North Delhi', slugs: ['adarsh-nagar', 'gtb-nagar', 'pitampura', 'rohini'] },
+  { name: 'East Delhi', slugs: ['bhajanpura', 'krishna-nagar'] },
+  { name: 'South Delhi', slugs: ['hauz-khas'] },
+]
+
+const L = (slug, name, city, region, about, nearFor) => ({ slug, name, city, region, about, nearFor })
+
+export const localities = [
+  L('adarsh-nagar', 'Adarsh Nagar', 'delhi', 'North Delhi',
+    'Adarsh Nagar lies in the north of the capital, close to the Azadpur and Jahangirpuri belt. Dense residential lanes and busy main roads here can make a short clinic trip surprisingly slow, particularly in peak hours.',
+    'Families in older multi-storey houses, where stairs make clinic visits hard for elders.'),
+  L('bali-nagar', 'Bali Nagar', 'delhi', 'West Delhi',
+    'Bali Nagar is a compact residential area in West Delhi near Ramesh Nagar and the Rajouri Garden side. With closely packed houses and busy market streets, parking near a clinic is often the hardest part of a visit.',
+    'Households that want a consultation at home instead of searching for parking near a clinic.'),
+  L('bhajanpura', 'Bhajanpura', 'delhi', 'East Delhi',
+    'Bhajanpura sits on the north-east side of the city near the Wazirabad Road corridor. Crowded colonies and heavy traffic on the main road can turn a routine clinic visit into a long outing.',
+    'Large joint families who would rather have the doctor visit than move several people to a clinic.'),
+  L('gtb-nagar', 'GTB Nagar', 'delhi', 'North Delhi',
+    'GTB Nagar is a well-known north Delhi neighbourhood near Kingsway Camp and the Delhi University North Campus area, home to long-term residents as well as many students and paying-guest tenants.',
+    'Residents and out-of-town students who need a doctor but cannot easily leave their rooms when unwell.'),
+  L('hauz-khas', 'Hauz Khas', 'delhi', 'South Delhi',
+    'Hauz Khas in South Delhi is a mix of established residential enclaves, apartments and busy market stretches. Several well-known institutions are nearby, but travelling to them when unwell is still tiring.',
+    'Senior residents of independent homes and apartments who prefer to be seen in a quiet, familiar setting.'),
+  L('karol-bagh', 'Karol Bagh', 'delhi', 'West Delhi',
+    'Karol Bagh is one of Delhi’s busiest central-west neighbourhoods, with crowded markets and narrow lanes. Visitors often struggle with congestion, which makes a doctor who comes to you particularly convenient.',
+    'Shop owners, traders and families living above or near markets who cannot easily step away.'),
+  L('krishna-nagar', 'Krishna Nagar', 'delhi', 'East Delhi',
+    'Krishna Nagar is an established trans-Yamuna residential and market area in East Delhi. Narrow, busy streets and heavy footfall around the main market make clinic visits time-consuming.',
+    'Families who need quick medical advice without navigating busy market roads.'),
+  L('mansarover-garden', 'Mansarover Garden', 'delhi', 'West Delhi',
+    'Mansarover Garden is a residential neighbourhood in West Delhi, close to the Kirti Nagar and Rajouri Garden side, with a mix of independent floors and small apartment blocks.',
+    'Residents of builder floors where several generations live together and one person may be unwell at a time.'),
+  L('palam', 'Palam', 'delhi', 'West Delhi',
+    'Palam, in south-west Delhi, spreads across Palam Colony, Dabri and the areas close to the airport zone. Distances between residential pockets are longer than in the inner city.',
+    'Households in outlying colonies who live a long way from the nearest multi-speciality clinic.'),
+  L('paschim-vihar', 'Paschim Vihar', 'delhi', 'West Delhi',
+    'Paschim Vihar is a large, planned residential area in West Delhi along the Rohtak Road corridor, with housing societies, independent floors and many senior residents.',
+    'Senior citizens and working couples who value a scheduled visit at home.'),
+  L('pitampura', 'Pitampura', 'delhi', 'North Delhi',
+    'Pitampura is a densely populated residential area in north-west Delhi, with cooperative group housing societies and lively market streets, including areas around Netaji Subhash Place.',
+    'Apartment society residents who want a doctor to come to the flat rather than managing a trip through traffic.'),
+  L('punjabi-bagh', 'Punjabi Bagh', 'delhi', 'West Delhi',
+    'Punjabi Bagh is an established west Delhi neighbourhood with large independent homes along the Club Road side and apartment blocks nearby.',
+    'Families with elderly members in larger independent houses.'),
+  L('rohini', 'Rohini', 'delhi', 'North Delhi',
+    'Rohini is a big planned sub-city in north-west Delhi divided into numbered sectors with many apartment societies. Because sectors are spread widely, even short clinic trips involve noticeable travel.',
+    'Society residents across Rohini sectors who want a consultation without a drive to another sector.'),
+  L('alpha-1', 'Alpha I', 'greater-noida', 'Greater Noida',
+    'Alpha I is one of the older planned residential sectors in Greater Noida, with independent houses and group housing close to the Alpha commercial belt.',
+    'Long-term residents of independent homes and societies who prefer a doctor at home.'),
+  L('gaur-city', 'Gaur City', 'greater-noida', 'Greater Noida',
+    'Gaur City is a large township in Greater Noida West made up of several high-rise societies, where a single complex can have thousands of residents.',
+    'Families in tall apartment towers, especially households with young children.'),
+  L('brij-vihar', 'Brij Vihar', 'ghaziabad', 'Ghaziabad',
+    'Brij Vihar is a residential colony in Ghaziabad, with a mix of independent houses and small apartment buildings on busy local roads.',
+    'Households that want a consultation at home without crossing busy roads to reach a clinic.'),
+  L('lajpat-nagar-sahibabad', 'Lajpat Nagar, Sahibabad', 'ghaziabad', 'Ghaziabad',
+    'Lajpat Nagar in Sahibabad is part of Ghaziabad close to the Delhi border, with dense colonies and a strong local market culture.',
+    'Residents who commute to Delhi for work and are home only in the evenings and at night.'),
+  L('siddharth-vihar', 'Siddharth Vihar', 'ghaziabad', 'Ghaziabad',
+    'Siddharth Vihar is a planned residential township along the NH-24 corridor in Ghaziabad, built around large apartment societies.',
+    'Apartment residents who want the doctor to be received at their society gate and visit them at home.'),
+]
+
+/* -------------------------------------------------------------- helpers -- */
+export const cityPath = (slug) => `/doctor-at-home-in-${slug}/`
+export const localityPath = (loc) => `/doctor-at-home-in-${loc.slug}-${loc.city}/`
+
+export const getCity = (slug) => cities.find((c) => c.slug === slug) || null
+export const getLocality = (slug, citySlug) =>
+  localities.find((l) => l.slug === slug && (!citySlug || l.city === citySlug)) || null
+export const localitiesOf = (citySlug) => localities.filter((l) => l.city === citySlug)
+
+/** Resolve `/:slug/` route params like `doctor-at-home-in-rohini-delhi`. */
+export function resolveLocationSlug(slug = '') {
+  const prefix = 'doctor-at-home-in-'
+  if (!slug.startsWith(prefix)) return null
+  const rest = slug.slice(prefix.length)
+  const city = getCity(rest)
+  if (city) return { type: 'city', city }
+  const loc = localities.find((l) => `${l.slug}-${l.city}` === rest)
+  if (loc) return { type: 'locality', locality: loc, city: getCity(loc.city) }
+  return null
+}
+
+export const DEFAULT_CITY_SLUG = 'delhi'
