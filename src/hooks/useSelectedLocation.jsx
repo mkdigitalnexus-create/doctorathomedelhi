@@ -28,9 +28,12 @@ export function LocationProvider({ children }) {
     const stored = safeGet(CITY_KEY)
     if (stored && getCity(stored)) setCitySlug(stored)
     setReady(true)
-    const seen = safeGet(SEEN_KEY)
-    if (!stored && !seen) {
-      const t = setTimeout(() => setModalOpen(true), 700)
+
+    // Open starting modal on initial load so visitors can choose their city and see the starting price.
+    // We skip automatic popup only on dedicated city pages where a location is already explicit in the URL.
+    const isDedicatedCityPage = typeof window !== 'undefined' && /^\/doctor-at-home-in-[a-z0-9-]+/.test(window.location.pathname)
+    if (!isDedicatedCityPage) {
+      const t = setTimeout(() => setModalOpen(true), 300)
       return () => clearTimeout(t)
     }
   }, [])
@@ -39,12 +42,10 @@ export function LocationProvider({ children }) {
     if (!getCity(slug)) return
     setCitySlug(slug)
     safeSet(CITY_KEY, slug)
-    safeSet(SEEN_KEY, '1')
     setModalOpen(false)
   }, [])
 
   const closeModal = useCallback(() => {
-    safeSet(SEEN_KEY, '1')
     setModalOpen(false)
   }, [])
 
