@@ -10,7 +10,7 @@ import Container from '@/components/ui/Container'
 import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 const facts = [
-  { icon: IndianRupee, label: '₹998 Consult • 5,000+ Visits', tone: 'bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold' },
+  { icon: IndianRupee, label: '₹699 Consult • 5,000+ Visits', tone: 'bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold' },
   { icon: Clock, label: '24/7 Available', tone: 'bg-care/10 text-care-dark' },
   { icon: BadgeCheck, label: 'Verified MBBS / MD Doctors', tone: 'bg-brand/10 text-brand-dark' },
 ]
@@ -45,10 +45,10 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Highlight Badge - "₹998 Consult • 5,000+ Visits" */}
+          {/* Highlight Badge - "₹699 Consult • 5,000+ Visits" */}
           <div className="mb-3.5 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50/90 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-emerald-800 shadow-xs">
             <span className="flex size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-            <span>₹998 Consult • 5,000+ Visits</span>
+            <span>₹699 Consult • 5,000+ Visits</span>
           </div>
 
           <p className="eyebrow block items-center gap-2 text-brand-dark">
@@ -134,7 +134,7 @@ export default function Hero() {
             <span className="flex size-10 items-center justify-center rounded-xl bg-gold/25 text-navy"><IndianRupee className="size-5" aria-hidden="true" /></span>
             <div>
               <p className="text-caption text-muted">Trusted Home Consultations</p>
-              <p className="text-base sm:text-lg font-bold leading-tight text-navy">₹998 Consult • 5,000+ Visits</p>
+              <p className="text-base sm:text-lg font-bold leading-tight text-navy">₹699 Consult • 5,000+ Visits</p>
             </div>
           </div>
           <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-2 text-sm font-semibold text-navy shadow-sm">

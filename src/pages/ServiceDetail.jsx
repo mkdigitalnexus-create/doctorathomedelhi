@@ -107,7 +107,7 @@ export default function ServiceDetail() {
           <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start" aria-label="Booking options">
             <div className="rounded-2xl border border-line bg-white p-6">
               <p className="text-caption text-muted">Starting consultation fee</p>
-              <p className="text-2xl sm:text-3xl font-bold text-navy">₹998 Consult • 5,000+ Visits</p>
+              <p className="text-2xl sm:text-3xl font-bold text-navy">₹699 Consult • 5,000+ Visits</p>
               <p className="mt-1 text-caption text-muted">Final details are confirmed when your appointment is arranged.</p>
               <div className="mt-5 grid gap-2.5">
                 <Button to={bookingTo} icon={CalendarCheck}>Book This Service</Button>

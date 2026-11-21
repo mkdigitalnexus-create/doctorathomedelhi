@@ -28,7 +28,7 @@ export default function LocationDetail({ city }) {
   const price = siteConfig.priceLabel
 
   const facts = [
-    { icon: IndianRupee, title: '₹998 Consult • 5,000+ Visits', text: `Doctor home visits across ${city.name} start at ₹998 with over 5,000+ completed home visits.`, tone: 'bg-emerald-50 text-emerald-800' },
+    { icon: IndianRupee, title: '₹699 Consult • 5,000+ Visits', text: `Doctor home visits across ${city.name} start at ₹699 with over 5,000+ completed home visits.`, tone: 'bg-emerald-50 text-emerald-800' },
     { icon: Clock, title: 'Bookings open 24/7', text: 'Call or message at any hour. Visit timing depends on doctor availability near your address.', tone: 'bg-care/10 text-care-dark' },
     { icon: BadgeCheck, title: 'Verified MBBS / MD doctors', text: `Qualified doctors visit your ${city.name} home for a full consultation.`, tone: 'bg-brand/10 text-brand-dark' },
   ]

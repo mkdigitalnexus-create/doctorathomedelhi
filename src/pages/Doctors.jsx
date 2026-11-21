@@ -22,8 +22,8 @@ export default function Doctors() {
   return (
     <>
       <SEO
-        title="Our Doctors | ₹998 Consult • 5,000+ Visits | Doctor at Home Delhi NCR"
-        description="Consult top hospital specialist doctors at home across Delhi NCR. Verified MBBS/MD doctors, ₹998 consult, 5,000+ home visits completed. Available 24/7."
+        title="Our Doctors | ₹699 Consult • 5,000+ Visits | Doctor at Home Delhi NCR"
+        description="Consult top hospital specialist doctors at home across Delhi NCR. Verified MBBS/MD doctors, ₹699 consult, 5,000+ home visits completed. Available 24/7."
         path="/our-doctors/"
         jsonLd={[breadcrumbSchema(crumbs)]}
       />

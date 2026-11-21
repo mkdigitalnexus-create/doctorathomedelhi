@@ -9,7 +9,7 @@
  * availability for any address is always subject to confirmation by our team.
  */
 
-const PRICE = '₹998'
+const PRICE = '₹699'
 
 export const cities = [
   {

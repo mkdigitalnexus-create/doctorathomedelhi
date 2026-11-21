@@ -99,7 +99,6 @@ export default function LocationModal() {
 
                   {/* Clean Highlight Price Card on Desktop Side Panel */}
                   <div className="rounded-2xl border border-amber-300 bg-gradient-to-br from-amber-400 via-amber-300 to-yellow-400 p-4 text-navy shadow-lg">
-                    <span className="text-xs font-semibold line-through text-navy/70 block">₹1,499</span>
                     <p className="text-xs font-bold text-navy/90">Doctor Home Visit Starting at</p>
                     <p className="text-3xl font-black tracking-tight text-navy">
                       ₹699 <span className="text-sm font-extrabold uppercase">Only</span>
@@ -119,7 +118,6 @@ export default function LocationModal() {
                     <p className="text-xs font-semibold text-white/90">24/7 Verified MBBS/MD</p>
                   </div>
                   <div className="rounded-xl bg-gold px-3 py-1 text-right text-navy shadow-sm">
-                    <span className="block text-[10px] font-medium leading-none line-through text-navy/70">₹1,499</span>
                     <span className="text-lg font-black leading-tight text-navy">₹699 <span className="text-[10px] font-bold">Only</span></span>
                   </div>
                 </div>
@@ -160,7 +158,6 @@ export default function LocationModal() {
                     </p>
                   </div>
                   <div className="shrink-0 rounded-xl bg-white px-3 py-1 text-right border border-amber-200/60 shadow-xs">
-                    <span className="block text-[10px] font-medium text-muted line-through">₹1,499</span>
                     <div className="flex items-baseline justify-end gap-1">
                       <span className="text-xl sm:text-2xl font-black tracking-tight text-red-600">₹699</span>
                       <span className="text-[10px] font-extrabold uppercase text-navy">Only</span>

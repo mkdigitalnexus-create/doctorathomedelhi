@@ -22,7 +22,7 @@ export default function BookingCTA({ cityName, bookingTo }) {
               <h2 id="cta-title" className="text-h1 !text-white">{cityName ? `Need a Doctor at Home in ${cityName}?` : 'Need a Doctor at Home?'}</h2>
               <p className="mt-3 max-w-lg text-base text-white/80">Get professional healthcare without travelling to a clinic.</p>
               <ul className="mt-6 flex flex-wrap gap-3">
-                <li className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-sm font-bold text-navy"><IndianRupee className="size-4" aria-hidden="true" />₹998 Consult • 5,000+ Visits</li>
+                <li className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-sm font-bold text-navy"><IndianRupee className="size-4" aria-hidden="true" />₹699 Consult • 5,000+ Visits</li>
                 <li className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold"><Clock className="size-4" aria-hidden="true" />Available 24/7</li>
               </ul>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

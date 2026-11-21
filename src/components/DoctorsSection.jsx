@@ -68,7 +68,7 @@ export default function DoctorsSection({ showLink = true, headingAs: HeadingTag 
           {/* Trust Badge */}
           <div className="mb-3.5 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-emerald-800 shadow-xs">
             <span className="flex size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-            <span>₹998 Consult • 5,000+ Visits</span>
+            <span>₹699 Consult • 5,000+ Visits</span>
           </div>
 
           <p className="eyebrow mb-3 block text-brand-dark">

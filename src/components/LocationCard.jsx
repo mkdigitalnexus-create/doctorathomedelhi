@@ -30,7 +30,7 @@ export default function LocationCard({ city, selected = false }) {
         {/* Top Badges */}
         <div className="absolute left-3 right-3 top-3 flex items-center justify-between gap-2">
           <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-navy shadow-xs backdrop-blur-xs">
-            From ₹998
+            From ₹699
           </span>
           {selected ? (
             <span className="rounded-full bg-care px-3 py-1 text-xs font-semibold text-white shadow-xs">

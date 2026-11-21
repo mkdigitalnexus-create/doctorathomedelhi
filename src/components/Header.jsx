@@ -17,7 +17,7 @@ function AnnouncementBar() {
     <div className="relative z-[60] bg-navy text-white">
       <Container className="flex items-center justify-between gap-2.5 py-1.5 sm:py-2 text-[12px] sm:text-[13px] leading-snug">
         <p className="font-medium truncate">
-          <span className="font-bold text-gold">₹998 Consult • 5,000+ Visits</span>
+          <span className="font-bold text-gold">₹699 Consult • 5,000+ Visits</span>
           <span className="mx-2 hidden text-white/40 sm:inline" aria-hidden="true">|</span>
           <span className="hidden sm:inline text-white/90">Delhi NCR Home Visits – Bookings Open 24/7</span>
         </p>
