@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title={city ? `Doctor at Home in ${city.name} | 24/7 Home Visit Starting ${siteConfig.priceLabel}` : `Doctor at Home Delhi NCR | 24/7 Home Visit Starting ${siteConfig.priceLabel}`}
+        title={city ? `Rs 699 Doctor At Home in ${city.name}, 24/7 DELHI NCR` : 'Rs 699 Doctor At Home, 24/7 DELHI NCR'}
         description={city ? `Book a verified MBBS/MD doctor at home in ${city.name}. Home visits available 24/7, starting at ${siteConfig.priceLabel}. Call or WhatsApp to check availability.` : `Book a verified MBBS/MD doctor at home across Delhi NCR. Doctor home visits available 24/7, starting at ${siteConfig.priceLabel}. Call or WhatsApp to check availability.`}
         path="/"
         jsonLd={[organizationSchema(), websiteSchema(), faqSchema(faqs)]}

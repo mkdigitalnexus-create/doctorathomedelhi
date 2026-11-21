@@ -45,15 +45,15 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Highlight Badge - "₹699 Consult • 5,000+ Visits" */}
+          {/* Highlight Badge - "Rs 699 Doctor At Home, 24/7 DELHI NCR" */}
           <div className="mb-3.5 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50/90 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-emerald-800 shadow-xs">
             <span className="flex size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-            <span>₹699 Consult • 5,000+ Visits</span>
+            <span>Rs 699 Doctor At Home, 24/7 DELHI NCR</span>
           </div>
 
-          <p className="eyebrow block items-center gap-2 text-brand-dark">
+          <p className="eyebrow block items-center gap-2 text-brand-dark font-bold uppercase tracking-wider">
             <span className="h-0.5 w-6 rounded-full bg-action inline-block mr-2" aria-hidden="true" />
-            DOCTOR HOME VISITS | {city ? city.name.toUpperCase() : 'DELHI NCR'} | 24/7
+            {city ? `Rs 699 Doctor At Home in ${city.name}, 24/7 DELHI NCR` : 'Rs 699 Doctor At Home, 24/7 DELHI NCR'}
           </p>
           <h1 id="hero-title" className="mt-4 text-hero">
             {city ? `Qualified Doctors at Your Doorstep in ${city.name}` : 'Qualified Doctors at Your Doorstep'}
