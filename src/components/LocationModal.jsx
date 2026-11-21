@@ -97,15 +97,10 @@ export default function LocationModal() {
                     ))}
                   </ul>
 
-                  {/* Mega Highlight Price Card on Desktop Side Panel */}
-                  <div className="rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-400 via-amber-300 to-yellow-400 p-4 text-navy shadow-xl">
-                    <div className="flex items-center justify-between">
-                      <span className="rounded-full bg-red-600 px-2 py-0.5 text-[10px] font-black uppercase text-white shadow-xs">
-                        Special Offer
-                      </span>
-                      <span className="text-xs font-semibold line-through text-navy/70">₹1,499</span>
-                    </div>
-                    <p className="mt-1 text-xs font-bold text-navy/90">Doctor Home Visit Starting at</p>
+                  {/* Clean Highlight Price Card on Desktop Side Panel */}
+                  <div className="rounded-2xl border border-amber-300 bg-gradient-to-br from-amber-400 via-amber-300 to-yellow-400 p-4 text-navy shadow-lg">
+                    <span className="text-xs font-semibold line-through text-navy/70 block">₹1,499</span>
+                    <p className="text-xs font-bold text-navy/90">Doctor Home Visit Starting at</p>
                     <p className="text-3xl font-black tracking-tight text-navy">
                       ₹699 <span className="text-sm font-extrabold uppercase">Only</span>
                     </p>
@@ -116,17 +111,8 @@ export default function LocationModal() {
 
             {/* Content */}
             <div className="relative p-5 sm:p-7">
-              <button
-                type="button"
-                onClick={closeModal}
-                aria-label="Close location selector"
-                className="absolute right-3 top-3 z-10 flex size-10 items-center justify-center rounded-full text-muted transition-colors hover:bg-mist hover:text-navy"
-              >
-                <X className="size-5" aria-hidden="true" />
-              </button>
-
               {/* compact price highlight – mobile */}
-              <div className="-mx-5 -mt-5 mb-4 bg-navy px-5 py-3 pr-14 text-white sm:-mx-7 sm:-mt-7 sm:px-7 md:hidden">
+              <div className="-mx-5 -mt-5 mb-4 bg-navy px-5 py-3 text-white sm:-mx-7 sm:-mt-7 sm:px-7 md:hidden">
                 <div className="flex items-center justify-between gap-2">
                   <div>
                     <p className="eyebrow text-gold text-[11px] leading-tight">Doctor At Home</p>
@@ -139,36 +125,51 @@ export default function LocationModal() {
                 </div>
               </div>
 
-              {/* Ultra-highlighted Price Banner at Top of Content */}
-              <div className="mb-4 overflow-hidden rounded-2xl border-2 border-amber-300 bg-gradient-to-r from-amber-500/15 via-amber-400/25 to-orange-500/15 p-3.5 shadow-sm">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="inline-block rounded-full bg-red-600 px-2 py-0.5 text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-white shadow-xs">
+              {/* Header with Title and Close Button (Flex, never overlapping) */}
+              <div className="flex items-center justify-between gap-3 pb-3">
+                <div>
+                  <h2 id="location-modal-title" className="text-xl sm:text-2xl font-bold text-navy">
+                    Select Your Location
+                  </h2>
+                  <p id="location-modal-desc" className="mt-0.5 text-xs sm:text-sm text-muted">
+                    Choose your city to check doctor home visit availability.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  aria-label="Close location selector"
+                  className="-mr-1.5 -mt-1 flex size-9 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-mist hover:text-navy"
+                >
+                  <X className="size-5" aria-hidden="true" />
+                </button>
+              </div>
+
+              {/* Clean Highlighted Price Banner */}
+              <div className="mb-4 rounded-2xl border border-amber-300 bg-gradient-to-r from-amber-50 via-orange-50/40 to-amber-50 p-3 shadow-xs">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="rounded-full bg-red-600 px-2 py-0.5 text-[10px] font-black uppercase text-white shadow-xs">
                         Special Offer
                       </span>
-                      <span className="text-xs font-bold text-emerald-800">● 24/7 Home Visits</span>
+                      <span className="text-[12px] font-bold text-emerald-800">● 24/7 Home Visits</span>
                     </div>
-                    <p className="mt-1 text-xs sm:text-sm font-bold text-navy">
+                    <p className="mt-1 text-xs sm:text-[13px] font-bold text-navy truncate">
                       Doctor Home Visit Across Delhi NCR
                     </p>
                   </div>
-                  <div className="shrink-0 text-right">
-                    <span className="block text-xs font-semibold text-muted line-through">₹1,499</span>
+                  <div className="shrink-0 rounded-xl bg-white px-3 py-1 text-right border border-amber-200/60 shadow-xs">
+                    <span className="block text-[10px] font-medium text-muted line-through">₹1,499</span>
                     <div className="flex items-baseline justify-end gap-1">
-                      <span className="text-2xl sm:text-3xl font-black tracking-tight text-red-600">₹699</span>
-                      <span className="text-xs font-extrabold uppercase text-navy">Only</span>
+                      <span className="text-xl sm:text-2xl font-black tracking-tight text-red-600">₹699</span>
+                      <span className="text-[10px] font-extrabold uppercase text-navy">Only</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <h2 id="location-modal-title" className="pr-10 text-xl sm:text-2xl font-bold text-navy">Select Your Location</h2>
-              <p id="location-modal-desc" className="mt-1 text-xs sm:text-sm text-muted">
-                Choose your city to check doctor home visit availability near your doorstep.
-              </p>
-
-              <div role="radiogroup" aria-label="Select your location" className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+              <div role="radiogroup" aria-label="Select your location" className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
                 {cities.map((c, i) => {
                   const selected = choice === c.slug
                   return (
@@ -180,22 +181,24 @@ export default function LocationModal() {
                       data-autofocus={i === 0 ? '' : undefined}
                       onClick={() => setChoice(c.slug)}
                       className={cn(
-                        'relative flex min-h-[4.5rem] flex-col items-start justify-center gap-0.5 rounded-2xl border-2 px-3.5 py-2.5 text-left transition-all',
-                        selected ? 'border-brand bg-brand/5 shadow-xs' : 'border-line bg-white hover:border-brand/50',
+                        'flex flex-col justify-between rounded-2xl border-2 p-3 text-left transition-all min-h-[4.75rem]',
+                        selected ? 'border-brand bg-brand/5 shadow-xs ring-2 ring-brand/20' : 'border-line bg-white hover:border-brand/40',
                       )}
                     >
-                      <div className="flex items-center gap-1.5">
-                        <MapPin className={cn('size-3.5', selected ? 'text-action' : 'text-brand')} aria-hidden="true" />
-                        <span className="text-[14px] sm:text-[15px] font-bold leading-tight text-navy">{c.name}</span>
+                      <div className="flex w-full items-center justify-between gap-1">
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <MapPin className={cn('size-3.5 shrink-0', selected ? 'text-action' : 'text-brand')} aria-hidden="true" />
+                          <span className="truncate text-sm sm:text-[15px] font-bold text-navy">{c.name}</span>
+                        </div>
+                        {selected ? (
+                          <span className="flex size-4.5 shrink-0 items-center justify-center rounded-full bg-care text-white shadow-xs">
+                            <Check className="size-3" aria-hidden="true" />
+                          </span>
+                        ) : null}
                       </div>
-                      <span className="inline-block rounded bg-emerald-50 px-1.5 py-0.5 text-[11px] font-extrabold text-emerald-700">
+                      <span className="mt-2 inline-block rounded bg-emerald-50 px-1.5 py-0.5 text-[11px] font-bold text-emerald-700">
                         From ₹699
                       </span>
-                      {selected ? (
-                        <span className="absolute right-2 top-2 flex size-5 items-center justify-center rounded-full bg-care text-white shadow-xs">
-                          <Check className="size-3.5" aria-hidden="true" />
-                        </span>
-                      ) : null}
                     </button>
                   )
                 })}
@@ -213,7 +216,7 @@ export default function LocationModal() {
                     }
                   }}
                 >
-                  {choice ? `Continue to Doctor Visit in ${choice ? choice.charAt(0).toUpperCase() + choice.slice(1) : ''} from ₹699 →` : 'Select City to Continue (from ₹699)'}
+                  Continue to Website
                 </Button>
                 <p className="mt-2.5 min-h-5 text-center text-caption text-muted" aria-live="polite">
                   {choice ? 'You can change your location any time from the top bar.' : 'Select a location to continue.'}

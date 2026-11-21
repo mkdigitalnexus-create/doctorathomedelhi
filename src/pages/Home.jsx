@@ -13,6 +13,7 @@ import WhyChoose from '@/components/WhyChoose'
 import HowItWorks from '@/components/HowItWorks'
 import DoctorsSection from '@/components/DoctorsSection'
 import LocationsSection from '@/components/LocationsSection'
+import HomeStats from '@/components/HomeStats'
 import BookingCTA from '@/components/BookingCTA'
 import FAQSection from '@/components/FAQSection'
 import Container from '@/components/ui/Container'
@@ -72,6 +73,7 @@ export default function Home() {
       <HowItWorks />
       <DoctorsSection />
       <LocationsSection />
+      <HomeStats />
       <BookingCTA />
       <FAQSection items={faqs} description={city ? `Clear answers about doctor home visits in ${city.name}, availability and fees.` : 'Clear answers about booking, availability, qualifications and fees.'} />
       <SeoCopy />
