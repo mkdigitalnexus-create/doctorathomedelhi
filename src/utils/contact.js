@@ -22,7 +22,6 @@ export function buildBookingMessage(data, { type = 'booking' } = {}) {
   const area = data.cityName || data.locality || ''
   const lines = [
     'Hi, I need a doctor home visit.',
-    `Name: ${data.name || ''}`,
     `Mobile: +91 ${data.mobile || ''}`,
     `My area: ${area}`,
     'My symptoms are: ',

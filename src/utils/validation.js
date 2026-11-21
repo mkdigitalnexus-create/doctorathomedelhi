@@ -10,11 +10,8 @@ export const sanitizeMobile = (value = '') => {
 
 export function validateBooking(values) {
   const errors = {}
-  if (!values.name || !values.name.trim() || values.name.trim().length < 2) {
-    errors.name = 'Please enter your name.'
-  }
   if (!values.mobile) {
-    errors.mobile = 'Please enter a mobile number.'
+    errors.mobile = 'Please enter your mobile number.'
   } else if (!MOBILE_RE.test(values.mobile)) {
     errors.mobile = 'Enter a valid 10-digit Indian mobile number starting with 6–9.'
   }

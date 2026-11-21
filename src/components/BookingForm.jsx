@@ -8,7 +8,7 @@ import { cn } from '@/utils/cn'
 import Button from '@/components/ui/Button'
 import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
-const EMPTY = { name: '', mobile: '' }
+const EMPTY = { mobile: '' }
 
 const inputCls =
   'h-12 w-full rounded-xl border border-line bg-white px-4 text-base text-ink placeholder:text-muted/70 transition-colors focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 aria-[invalid=true]:border-action-dark aria-[invalid=true]:ring-1 aria-[invalid=true]:ring-action-dark/40'
@@ -28,7 +28,7 @@ function Field({ id, label, required, error, hint, className, children }) {
 }
 
 /**
- * Booking / callback form requiring only Name and Mobile number.
+ * Booking / callback form requiring ONLY Mobile number.
  */
 export default function BookingForm({ variant = 'booking', idPrefix = 'bk', className }) {
   const full = variant === 'booking'
@@ -100,15 +100,21 @@ export default function BookingForm({ variant = 'booking', idPrefix = 'bk', clas
         <h3 className="mt-5 text-h2">{result.channel === 'server' ? 'Request received' : 'Almost done – send your message on WhatsApp'}</h3>
         <p className="mt-3 text-base text-muted">
           {result.channel === 'server'
-            ? 'Thank you. Our team will contact you shortly on your mobile number to confirm your address, service availability and appointment details.'
-            : 'We have opened WhatsApp with your details filled in. Please tap Send in WhatsApp so the message reaches our team. We will then contact you to confirm your address, service availability and appointment details.'}
+            ? 'Thank you. Our medical team will contact you shortly on your mobile number to confirm your address, service availability and visit details.'
+            : 'We have opened WhatsApp with your mobile number filled in. Please tap Send in WhatsApp so the message reaches our team. We will then contact you to confirm your address and visit details.'}
         </p>
         <p className="mt-3 rounded-xl bg-gold/20 px-4 py-3 text-sm font-medium text-navy">
           Your appointment is not confirmed until our team confirms it with you.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           {result.channel === 'whatsapp' ? <Button href={result.url} variant="care" icon={WhatsAppIcon}>Open WhatsApp again</Button> : null}
-          <Button href={telHref} variant="outline" icon={Phone}>Call Now</Button>
+          <a
+            href={telHref}
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-red-600 px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+          >
+            <Phone className="size-5 shrink-0 fill-current" aria-hidden="true" />
+            <span>Call Now</span>
+          </a>
           <Button variant="ghost" icon={RotateCcw} onClick={reset}>Make another request</Button>
         </div>
       </div>
@@ -122,23 +128,8 @@ export default function BookingForm({ variant = 'booking', idPrefix = 'bk', clas
       className={cn('rounded-3xl border border-line bg-white p-5 sm:p-8', className)}
       aria-label={full ? 'Home visit booking form' : 'Callback request form'}
     >
-      <p className="mb-5 text-caption text-muted"><span className="text-action-dark" aria-hidden="true">*</span> Required fields</p>
-
-      <div className="grid gap-5 sm:grid-cols-2">
-        <Field id={id('name')} label="Full Name" required error={errors.name}>
-          <input
-            {...common('name')}
-            type="text"
-            name="name"
-            autoComplete="name"
-            value={values.name}
-            onChange={(e) => set('name', e.target.value)}
-            placeholder="Enter full name"
-            className={inputCls}
-          />
-        </Field>
-
-        <Field id={id('mobile')} label="Mobile Number" required error={errors.mobile} hint="We will call or message you on this number.">
+      <div className="space-y-4">
+        <Field id={id('mobile')} label="Mobile Number" required error={errors.mobile} hint="Enter your 10-digit number. Our medical team will immediately call or message you to confirm the visit.">
           <div className="flex">
             <span className="inline-flex h-12 items-center rounded-l-xl border border-r-0 border-line bg-mist px-3.5 text-base font-semibold text-navy" aria-hidden="true">+91</span>
             <input
@@ -150,8 +141,8 @@ export default function BookingForm({ variant = 'booking', idPrefix = 'bk', clas
               maxLength={22}
               value={values.mobile}
               onChange={(e) => set('mobile', sanitizeMobile(e.target.value))}
-              placeholder="10-digit mobile number"
-              className={cn(inputCls, 'rounded-l-none')}
+              placeholder="Enter 10-digit mobile number"
+              className={cn(inputCls, 'rounded-l-none text-base sm:text-lg font-medium')}
             />
           </div>
         </Field>
@@ -173,7 +164,7 @@ export default function BookingForm({ variant = 'booking', idPrefix = 'bk', clas
           className="sm:col-span-1"
           aria-busy={status === 'loading'}
         >
-          {status === 'loading' ? (<><Loader2 className="size-5 animate-spin" aria-hidden="true" />Sending…</>) : full ? 'Book a Home Visit' : 'Request a Callback'}
+          {status === 'loading' ? (<><Loader2 className="size-5 animate-spin" aria-hidden="true" />Sending…</>) : full ? 'Book a Home Visit' : 'Request Callback'}
         </Button>
         <button
           type="button"
