@@ -29,7 +29,7 @@ export default function Doctors() {
         breadcrumbs={crumbs}
         eyebrow="Our Doctors"
         title="Qualified MBBS / MD Doctors, Visiting You at Home"
-        subtitle="Every published profile will list the doctor’s qualification, medical registration details and specialization after verification. Until then, the profiles below are clearly marked placeholders."
+        subtitle="Consult top hospital specialist doctors for all health concerns right from the comfort of your home across Delhi NCR."
       />
       <DoctorsSection showLink={false} className="py-12 md:py-16" />
       <section className="bg-mist py-14 md:py-16" aria-labelledby="verify-title">

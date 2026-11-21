@@ -13,18 +13,20 @@ import Container from '@/components/ui/Container'
 
 function AnnouncementBar() {
   return (
-    <div className="bg-navy text-white">
-      <Container className="flex items-center justify-between gap-4 py-2 text-[13px] leading-snug">
-        <p className="font-medium">
+    <div className="relative z-[60] bg-navy text-white">
+      <Container className="flex items-center justify-between gap-2.5 py-1.5 sm:py-2 text-[12px] sm:text-[13px] leading-snug">
+        <p className="font-medium truncate">
           <span>Delhi, Gurgaon &amp; Noida – {siteConfig.priceLabel}</span>
           <span className="mx-2 hidden text-white/40 sm:inline" aria-hidden="true">|</span>
-          <br className="sm:hidden" />
-          <span className="text-white/90">Home Visit – Bookings Open 24/7</span>
+          <span className="hidden sm:inline text-white/90">Home Visit – Bookings Open 24/7</span>
         </p>
-        <a href={telHref} className="hidden shrink-0 items-center gap-1.5 font-semibold text-gold hover:underline md:inline-flex">
-          <Phone className="size-3.5" aria-hidden="true" />
-          {siteConfig.phone.display}
-        </a>
+        <div className="flex shrink-0 items-center gap-2.5 sm:gap-4">
+          <LocationSelector variant="bar" />
+          <a href={telHref} className="hidden shrink-0 items-center gap-1.5 font-semibold text-gold hover:underline md:inline-flex">
+            <Phone className="size-3.5" aria-hidden="true" />
+            {siteConfig.phone.display}
+          </a>
+        </div>
       </Container>
     </div>
   )
@@ -62,13 +64,26 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <LocationSelector />
-            <Button href={telHref} variant="outline" size="sm" icon={Phone} className="hidden md:inline-flex">
-              Call Now
-            </Button>
-            <Button to={BOOKING_PATH} size="sm" icon={CalendarCheck} className="hidden md:inline-flex">
-              Book a Doctor
-            </Button>
+            {/* On mobile screens, show prominent Call Now button instead of location selector */}
+            <a
+              href={telHref}
+              className="inline-flex h-10 items-center gap-1.5 rounded-xl bg-action px-3.5 text-sm font-semibold text-white shadow-xs transition-colors hover:bg-action-dark md:hidden"
+              aria-label="Call Doctor Now"
+            >
+              <Phone className="size-4 shrink-0 fill-current" aria-hidden="true" />
+              <span>Call Now</span>
+            </a>
+
+            {/* Desktop only location selector & buttons */}
+            <div className="hidden md:flex items-center gap-2">
+              <LocationSelector variant="header" />
+              <Button href={telHref} variant="outline" size="sm" icon={Phone}>
+                Call Now
+              </Button>
+              <Button to={BOOKING_PATH} size="sm" icon={CalendarCheck}>
+                Book a Doctor
+              </Button>
+            </div>
             <button
               type="button"
               className="flex size-10 items-center justify-center rounded-xl border border-line text-navy transition-colors hover:border-brand xl:hidden"

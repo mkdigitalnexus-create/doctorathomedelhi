@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { bookingFaqs } from '@/data/faqs'
 import { breadcrumbSchema, faqSchema } from '@/utils/seo'
@@ -11,6 +11,7 @@ import FAQSection from '@/components/FAQSection'
 import EmergencyNote from '@/components/EmergencyNote'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 const crumbs = [{ name: 'Home', path: '/' }, { name: 'Book a Home Doctor', path: '/book-home-doctor/' }]
 
@@ -53,7 +54,7 @@ export default function Booking() {
           <aside className="space-y-5 lg:sticky lg:top-28" aria-label="Booking information">
             {city ? (
               <p className="rounded-2xl bg-brand/10 px-5 py-4 text-sm text-navy">
-                Booking for <strong className="font-semibold">{city.name}</strong>. Use the city field in the form to change it.
+                Arranging home visit in <strong className="font-semibold">{city.name}</strong>.
               </p>
             ) : null}
             <div className="rounded-2xl border border-line bg-white p-6">
@@ -75,7 +76,7 @@ export default function Booking() {
               <p className="mt-1.5 text-sm text-muted">Bookings are open 24/7.</p>
               <div className="mt-4 grid gap-3">
                 <Button href={telHref} variant="secondary" icon={Phone}>{siteConfig.phone.display}</Button>
-                <Button href={whatsappHref(defaultWhatsAppMessage(city?.name))} variant="care" icon={MessageCircle}>WhatsApp us</Button>
+                <Button href={whatsappHref(defaultWhatsAppMessage(city?.name))} variant="care" icon={WhatsAppIcon}>WhatsApp us</Button>
               </div>
             </div>
             <EmergencyNote />

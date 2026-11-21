@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { CalendarCheck, Check, MessageCircle, Phone } from 'lucide-react'
+import { CalendarCheck, Check, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { getService, services, servicePath } from '@/data/services'
 import { cities, cityPath } from '@/data/locations'
@@ -13,6 +13,7 @@ import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
 import Icon from '@/components/ui/Icon'
 import FAQ from '@/components/FAQ'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 import BookingCTA from '@/components/BookingCTA'
 import EmergencyNote from '@/components/EmergencyNote'
 import AreaLinks from '@/components/AreaLinks'
@@ -110,7 +111,7 @@ export default function ServiceDetail() {
               <p className="mt-1 text-caption text-muted">Final details are confirmed when your appointment is arranged.</p>
               <div className="mt-5 grid gap-3">
                 <Button to={bookingTo} icon={CalendarCheck}>Book This Service</Button>
-                <Button href={whatsappHref(`Hello Doctor At Home, I would like to arrange: ${service.title}. Please share availability.`)} variant="care" icon={MessageCircle}>WhatsApp</Button>
+                <Button href={whatsappHref(`Hello Doctor At Home, I would like to arrange: ${service.title}. Please share availability.`)} variant="care" icon={WhatsAppIcon}>WhatsApp</Button>
                 <Button href={telHref} variant="outline" icon={Phone}>Call Now</Button>
               </div>
             </div>

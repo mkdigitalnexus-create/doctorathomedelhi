@@ -1,10 +1,11 @@
-import { CalendarCheck, Clock, IndianRupee, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { CalendarCheck, Clock, IndianRupee, MapPin, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { BOOKING_PATH } from '@/data/navigation'
 import { telHref, whatsappHref, defaultWhatsAppMessage } from '@/utils/contact'
 import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 /** Booking call-to-action band. Pass `cityName` on city pages; otherwise it follows the selected location. */
 export default function BookingCTA({ cityName, bookingTo }) {
@@ -27,7 +28,7 @@ export default function BookingCTA({ cityName, bookingTo }) {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button to={to} size="lg" icon={CalendarCheck}>Book a Home Visit</Button>
                 <Button href={telHref} variant="light" size="lg" icon={Phone}>Call Now</Button>
-                <Button href={whatsappHref(defaultWhatsAppMessage(name))} variant="care" size="lg" icon={MessageCircle}>WhatsApp</Button>
+                <Button href={whatsappHref(defaultWhatsAppMessage(name))} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
               </div>
               {name ? (
                 <p className="mt-5 flex items-center gap-2 text-sm text-white/75"><MapPin className="size-4 text-gold" aria-hidden="true" />Requests for {name} are confirmed by our team before the visit.</p>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CalendarCheck, Check, MessageCircle, Phone } from 'lucide-react'
+import { CalendarCheck, Check, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { cityPath, localitiesOf, localityPath } from '@/data/locations'
 import { services, servicePath } from '@/data/services'
@@ -13,6 +13,7 @@ import FAQSection from '@/components/FAQSection'
 import AreaLinks from '@/components/AreaLinks'
 import EmergencyNote from '@/components/EmergencyNote'
 import Button from '@/components/ui/Button'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 import Container from '@/components/ui/Container'
 import Icon from '@/components/ui/Icon'
 
@@ -62,7 +63,7 @@ export default function LocalityDetail({ locality, city }) {
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button to={bookingTo} size="lg" icon={CalendarCheck}>Book a Visit in {locality.name}</Button>
           <Button href={telHref} variant="outline" size="lg" icon={Phone}>Call Now</Button>
-          <Button href={whatsappHref(`Hello Doctor At Home, I would like to arrange a doctor home visit in ${locality.name}, ${city.name}. Please share availability.`)} variant="care" size="lg" icon={MessageCircle}>WhatsApp</Button>
+          <Button href={whatsappHref(`Hello Doctor At Home, I would like to arrange a doctor home visit in ${locality.name}, ${city.name}. Please share availability.`)} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
         </div>
       </PageHero>
 

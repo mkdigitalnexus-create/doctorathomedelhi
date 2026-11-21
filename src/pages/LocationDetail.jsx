@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BadgeCheck, CalendarCheck, Check, Clock, IndianRupee, MessageCircle, Phone } from 'lucide-react'
+import { BadgeCheck, CalendarCheck, Check, Clock, IndianRupee, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { cityPath, delhiRegions, getCity, getLocality, localitiesOf, localityPath } from '@/data/locations'
 import { BOOKING_PATH } from '@/data/navigation'
@@ -13,6 +13,7 @@ import FAQSection from '@/components/FAQSection'
 import AreaLinks from '@/components/AreaLinks'
 import EmergencyNote from '@/components/EmergencyNote'
 import Button from '@/components/ui/Button'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 import Container from '@/components/ui/Container'
 import CitySkyline from '@/components/ui/CitySkyline'
 import SectionHeading from '@/components/ui/SectionHeading'
@@ -52,7 +53,16 @@ export default function LocationDetail({ city }) {
         subtitle={city.heroSubtitle}
         aside={
           <div className="overflow-hidden rounded-3xl border border-line bg-white">
-            <div className="h-48 sm:h-56"><CitySkyline skyline={city.skyline} /></div>
+            <div className="relative h-48 sm:h-56 overflow-hidden bg-mist">
+              <img
+                src={city.image || `/images/locations/${city.slug}.webp`}
+                alt={`Doctor home visits across ${city.name}`}
+                width="800"
+                height="480"
+                className="h-full w-full object-cover"
+                loading="eager"
+              />
+            </div>
             <ul className="divide-y divide-line">
               {facts.map(({ icon: I, title, tone }) => (
                 <li key={title} className="flex items-center gap-3 px-5 py-3.5">
@@ -67,7 +77,7 @@ export default function LocationDetail({ city }) {
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button to={bookingTo} size="lg" icon={CalendarCheck}>Book a Home Visit in {city.name}</Button>
           <Button href={telHref} variant="outline" size="lg" icon={Phone}>Call Now</Button>
-          <Button href={whatsappHref(defaultWhatsAppMessage(city.name))} variant="care" size="lg" icon={MessageCircle}>WhatsApp</Button>
+          <Button href={whatsappHref(defaultWhatsAppMessage(city.name))} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
         </div>
       </PageHero>
 

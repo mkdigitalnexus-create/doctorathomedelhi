@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CalendarCheck, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { CalendarCheck, Mail, MapPin, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { quickLinks, legalLinks, BOOKING_PATH } from '@/data/navigation'
 import { services, servicePath } from '@/data/services'
@@ -9,6 +9,7 @@ import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import Logo from '@/components/Logo'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 function FooterList({ title, children }) {
   return (
@@ -54,7 +55,7 @@ export default function Footer() {
           <h3 className="mb-4 text-[15px] font-semibold text-white">Contact</h3>
           <address className="space-y-3 text-sm not-italic text-white/75">
             <p className="flex gap-2.5"><Phone className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><a href={telHref} className={linkCls}>{siteConfig.phone.display}</a></p>
-            <p className="flex gap-2.5"><MessageCircle className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><a href={whatsappHref(defaultWhatsAppMessage(city?.name))} className={linkCls} target="_blank" rel="noopener noreferrer">WhatsApp us</a></p>
+            <p className="flex gap-2.5"><WhatsAppIcon className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><a href={whatsappHref(defaultWhatsAppMessage(city?.name))} className={linkCls} target="_blank" rel="noopener noreferrer">WhatsApp us</a></p>
             <p className="flex gap-2.5"><Mail className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><a href={`mailto:${siteConfig.email.address}`} className={linkCls}>{siteConfig.email.address}</a></p>
             <p className="flex gap-2.5"><MapPin className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" /><span>{siteConfig.address.lines.join(', ')}</span></p>
           </address>

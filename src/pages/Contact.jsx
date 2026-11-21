@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
+import { Clock, Mail, MapPin, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { contactFaqs } from '@/data/faqs'
 import { cities, cityPath } from '@/data/locations'
@@ -14,6 +14,7 @@ import AreaLinks from '@/components/AreaLinks'
 import EmergencyNote from '@/components/EmergencyNote'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 const crumbs = [{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact/' }]
 
@@ -47,7 +48,7 @@ export default function Contact() {
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button href={telHref} size="lg" icon={Phone}>Call {siteConfig.phone.display}</Button>
-          <Button href={whatsappHref(defaultWhatsAppMessage(city?.name))} variant="care" size="lg" icon={MessageCircle}>WhatsApp</Button>
+          <Button href={whatsappHref(defaultWhatsAppMessage(city?.name))} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
         </div>
       </PageHero>
 
@@ -57,7 +58,7 @@ export default function Contact() {
             <InfoCard icon={Phone} title="Call us" tone="bg-action/10 text-action-dark">
               <a href={telHref} className="font-semibold text-navy hover:underline">{siteConfig.phone.display}</a>
             </InfoCard>
-            <InfoCard icon={MessageCircle} title="WhatsApp" tone="bg-care/10 text-care-dark">
+            <InfoCard icon={WhatsAppIcon} title="WhatsApp" tone="bg-care/10 text-care-dark">
               <a href={whatsappHref(defaultWhatsAppMessage(city?.name))} target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:underline">Start a WhatsApp chat</a>
             </InfoCard>
             <InfoCard icon={Mail} title="Email">

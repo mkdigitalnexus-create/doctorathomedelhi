@@ -15,6 +15,7 @@ export const cities = [
   {
     slug: 'delhi',
     name: 'Delhi',
+    image: '/images/locations/delhi.webp',
     shortDescription:
       'Doctor home visits for colonies and apartments across West, North, East and South Delhi.',
     seoTitle: `Doctor at Home in Delhi | 24/7 Home Visit Starting ${PRICE}`,
@@ -51,6 +52,7 @@ export const cities = [
   {
     slug: 'gurgaon',
     name: 'Gurgaon',
+    image: '/images/locations/gurgaon.webp',
     shortDescription:
       'Home visits for high-rise societies, gated communities and working families in Gurgaon.',
     seoTitle: `Doctor at Home in Gurgaon | 24/7 Home Visit Starting ${PRICE}`,
@@ -87,6 +89,7 @@ export const cities = [
   {
     slug: 'noida',
     name: 'Noida',
+    image: '/images/locations/noida.webp',
     shortDescription:
       'Sector-wise home doctor visits for apartments and independent homes across Noida.',
     seoTitle: `Doctor at Home in Noida | 24/7 Home Visit Starting ${PRICE}`,
@@ -123,6 +126,7 @@ export const cities = [
   {
     slug: 'greater-noida',
     name: 'Greater Noida',
+    image: '/images/locations/greater-noida.webp',
     shortDescription:
       'Doctor home visits for Alpha I, Gaur City and other Greater Noida societies.',
     seoTitle: `Doctor at Home in Greater Noida | 24/7 Visit Starting ${PRICE}`,
@@ -159,6 +163,7 @@ export const cities = [
   {
     slug: 'ghaziabad',
     name: 'Ghaziabad',
+    image: '/images/locations/ghaziabad.webp',
     shortDescription:
       'Home doctor visits for Brij Vihar, Sahibabad, Siddharth Vihar and nearby Ghaziabad colonies.',
     seoTitle: `Doctor at Home in Ghaziabad | 24/7 Visit Starting ${PRICE}`,
@@ -195,6 +200,7 @@ export const cities = [
   {
     slug: 'faridabad',
     name: 'Faridabad',
+    image: '/images/locations/faridabad.webp',
     shortDescription:
       'Doctor home visits for sectors, NIT and Greater Faridabad neighbourhoods.',
     seoTitle: `Doctor at Home in Faridabad | 24/7 Home Visit Starting ${PRICE}`,

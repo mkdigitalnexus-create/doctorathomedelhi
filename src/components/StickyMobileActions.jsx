@@ -1,9 +1,10 @@
 import { useLocation } from 'react-router-dom'
-import { CalendarCheck, MessageCircle, Phone } from 'lucide-react'
+import { CalendarCheck, Phone } from 'lucide-react'
 import { BOOKING_PATH } from '@/data/navigation'
 import { telHref, whatsappHref, defaultWhatsAppMessage } from '@/utils/contact'
 import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import Button from '@/components/ui/Button'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 /**
  * Mobile-only fixed action bar. The footer reserves bottom padding so the bar never
@@ -26,13 +27,13 @@ export default function StickyMobileActions() {
       {isContact ? (
         <div className="grid grid-cols-2 gap-3">
           <Button href={telHref} variant="secondary" icon={Phone} className="uppercase tracking-wide">Call Now</Button>
-          <Button href={wa} variant="care" icon={MessageCircle} className="uppercase tracking-wide">WhatsApp</Button>
+          <Button href={wa} variant="care" icon={WhatsAppIcon} className="uppercase tracking-wide">WhatsApp</Button>
         </div>
       ) : (
         <div className="grid grid-cols-[1fr_auto_1.3fr] gap-3">
           <Button href={telHref} variant="secondary" icon={Phone}>Call Now</Button>
           <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="flex size-12 items-center justify-center rounded-xl bg-care text-white transition-colors hover:bg-care-dark">
-            <MessageCircle className="size-5" aria-hidden="true" />
+            <WhatsAppIcon className="size-5" aria-hidden="true" />
           </a>
           <Button to={BOOKING_PATH} icon={CalendarCheck}>Book a Doctor</Button>
         </div>
