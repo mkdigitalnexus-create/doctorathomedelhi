@@ -49,7 +49,7 @@ await build({
   plugins: [react(), tailwindcss()],
   build: {
     outDir: appOut,
-    emptyOutDir: true,
+    emptyOutDir: false,
     cssCodeSplit: false,
     sourcemap: false,
     rollupOptions: {
@@ -57,7 +57,7 @@ await build({
       output: {
         entryFileNames: 'main.js',
         chunkFileNames: 'chunks/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]',
+        assetFileNames: 'app-assets/[name]-[hash][extname]',
       },
     },
   },

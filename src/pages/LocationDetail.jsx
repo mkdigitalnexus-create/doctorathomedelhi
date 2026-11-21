@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { BadgeCheck, CalendarCheck, Check, Clock, IndianRupee, Phone } from 'lucide-react'
+import { BadgeCheck, CalendarCheck, Check, Clock, IndianRupee, MapPin, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { cityPath, delhiRegions, getCity, getLocality, localitiesOf, localityPath } from '@/data/locations'
 import { BOOKING_PATH } from '@/data/navigation'
@@ -91,6 +91,19 @@ export default function LocationDetail({ city }) {
           >
             <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
             <span>WhatsApp</span>
+          </a>
+        </div>
+
+        {/* Google Maps Location Link as requested */}
+        <div className="mt-4">
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Doctor at home in ${city.name}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-brand-dark underline underline-offset-4 hover:text-action transition-colors"
+          >
+            <MapPin className="size-4 text-action shrink-0" aria-hidden="true" />
+            <span>{city.name} on Google Maps</span>
           </a>
         </div>
       </PageHero>
