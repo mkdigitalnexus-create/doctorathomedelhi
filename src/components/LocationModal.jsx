@@ -54,7 +54,7 @@ export default function LocationModal() {
   const facts = [
     { icon: Clock, label: '24/7 AVAILABLE' },
     { icon: BadgeCheck, label: 'Verified MBBS / MD Doctors' },
-    { icon: IndianRupee, label: `Starting at ${siteConfig.priceLabel} Only`, highlight: true },
+    { icon: IndianRupee, label: 'Starting at ₹699 Only', highlight: true },
   ]
 
   return (
@@ -92,7 +92,7 @@ export default function LocationModal() {
                   <p className="eyebrow mb-3 text-gold">Doctor At Home</p>
                   <ul className="space-y-2.5">
                     {facts.map(({ icon: I, label, highlight }) => (
-                      <li key={label} className={cn('flex w-fit items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold', highlight ? 'bg-gold text-navy' : 'bg-white/15 text-white')}>
+                      <li key={label} className={cn('flex w-fit items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold', highlight ? 'bg-gold text-navy font-bold shadow-xs' : 'bg-white/15 text-white')}>
                         <I className="size-4" aria-hidden="true" />{label}
                       </li>
                     ))}
@@ -117,9 +117,15 @@ export default function LocationModal() {
                 <p className="eyebrow mb-2 text-gold">Doctor At Home</p>
                 <ul className="flex flex-wrap gap-2 text-[12px] font-semibold">
                   {facts.map(({ label, highlight }) => (
-                    <li key={label} className={cn('rounded-md px-2.5 py-1', highlight ? 'bg-gold text-navy' : 'bg-white/15')}>{label}</li>
+                    <li key={label} className={cn('rounded-md px-2.5 py-1', highlight ? 'bg-gold text-navy font-bold shadow-xs' : 'bg-white/15')}>{label}</li>
                   ))}
                 </ul>
+              </div>
+
+              {/* Highlighted Price Badge */}
+              <div className="mb-3.5 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-emerald-800 shadow-xs">
+                <span className="flex size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                <span>Doctor Home Visit Starting at ₹699 Only</span>
               </div>
 
               <h2 id="location-modal-title" className="pr-10 text-h2 md:pr-8">Doctor at Home – Delhi NCR</h2>
