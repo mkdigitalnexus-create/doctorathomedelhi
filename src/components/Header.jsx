@@ -4,21 +4,22 @@ import { AnimatePresence, m } from 'framer-motion'
 import { CalendarCheck, Menu, Phone, X } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
 import { mainNav, BOOKING_PATH } from '@/data/navigation'
-import { telHref } from '@/utils/contact'
+import { defaultWhatsAppMessage, telHref, whatsappHref } from '@/utils/contact'
 import { cn } from '@/utils/cn'
 import Logo from '@/components/Logo'
 import LocationSelector from '@/components/LocationSelector'
 import Button from '@/components/ui/Button'
 import Container from '@/components/ui/Container'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 function AnnouncementBar() {
   return (
     <div className="relative z-[60] bg-navy text-white">
       <Container className="flex items-center justify-between gap-2.5 py-1.5 sm:py-2 text-[12px] sm:text-[13px] leading-snug">
         <p className="font-medium truncate">
-          <span>Delhi, Gurgaon &amp; Noida – {siteConfig.priceLabel}</span>
+          <span className="font-bold text-gold">₹998 Consult • 5,000+ Visits</span>
           <span className="mx-2 hidden text-white/40 sm:inline" aria-hidden="true">|</span>
-          <span className="hidden sm:inline text-white/90">Home Visit – Bookings Open 24/7</span>
+          <span className="hidden sm:inline text-white/90">Delhi NCR Home Visits – Bookings Open 24/7</span>
         </p>
         <div className="flex shrink-0 items-center gap-2.5 sm:gap-4">
           <LocationSelector variant="bar" />
@@ -63,15 +64,26 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
-            {/* On mobile screens, show prominent Call Now button instead of location selector */}
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Mobile Call (Red) & WhatsApp (Green) buttons */}
             <a
               href={telHref}
-              className="inline-flex h-10 items-center gap-1.5 rounded-xl bg-action px-3.5 text-sm font-semibold text-white shadow-xs transition-colors hover:bg-action-dark md:hidden"
+              className="inline-flex h-9 sm:h-10 items-center gap-1.5 rounded-xl bg-red-600 px-2.5 sm:px-3 text-xs sm:text-sm font-semibold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800 md:hidden"
               aria-label="Call Doctor Now"
             >
-              <Phone className="size-4 shrink-0 fill-current" aria-hidden="true" />
-              <span>Call Now</span>
+              <Phone className="size-3.5 sm:size-4 shrink-0 fill-current" aria-hidden="true" />
+              <span>Call</span>
+            </a>
+
+            <a
+              href={whatsappHref(defaultWhatsAppMessage())}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-9 sm:h-10 items-center gap-1.5 rounded-xl bg-[#25D366] px-2.5 sm:px-3 text-xs sm:text-sm font-semibold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851] md:hidden"
+              aria-label="Chat on WhatsApp"
+            >
+              <WhatsAppIcon className="size-3.5 sm:size-4 shrink-0" aria-hidden="true" />
+              <span className="hidden xs:inline">WhatsApp</span>
             </a>
 
             {/* Desktop only location selector & buttons */}
@@ -86,7 +98,7 @@ export default function Header() {
             </div>
             <button
               type="button"
-              className="flex size-10 items-center justify-center rounded-xl border border-line text-navy transition-colors hover:border-brand xl:hidden"
+              className="flex size-9 sm:size-10 items-center justify-center rounded-xl border border-line text-navy transition-colors hover:border-brand xl:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? 'Close menu' : 'Open menu'}
@@ -126,9 +138,26 @@ export default function Header() {
                     ))}
                   </ul>
                 </nav>
-                <div className="grid grid-cols-2 gap-3 py-4">
-                  <Button href={telHref} variant="outline" icon={Phone}>Call Now</Button>
-                  <Button to={BOOKING_PATH} icon={CalendarCheck}>Book a Doctor</Button>
+                <div className="grid grid-cols-2 gap-2.5 py-4">
+                  <a
+                    href={telHref}
+                    className="flex h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-3 text-sm font-bold text-white shadow-xs hover:bg-red-700"
+                  >
+                    <Phone className="size-4 shrink-0 fill-current" aria-hidden="true" />
+                    <span>Call Now</span>
+                  </a>
+                  <a
+                    href={whatsappHref(defaultWhatsAppMessage())}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-3 text-sm font-bold text-white shadow-xs hover:bg-[#20ba5a]"
+                  >
+                    <WhatsAppIcon className="size-4 shrink-0" aria-hidden="true" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+                <div className="pb-2">
+                  <Button to={BOOKING_PATH} icon={CalendarCheck} className="w-full">Book a Doctor</Button>
                 </div>
               </Container>
             </m.div>

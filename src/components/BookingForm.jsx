@@ -175,8 +175,22 @@ export default function BookingForm({ variant = 'booking', idPrefix = 'bk', clas
         >
           {status === 'loading' ? (<><Loader2 className="size-5 animate-spin" aria-hidden="true" />Sending…</>) : full ? 'Book a Home Visit' : 'Request a Callback'}
         </Button>
-        <Button variant="care" size="lg" icon={WhatsAppIcon} disabled={status === 'loading'} onClick={() => submit('whatsapp')}>Book via WhatsApp</Button>
-        <Button href={telHref} variant="outline" size="lg" icon={Phone}>Call Now</Button>
+        <button
+          type="button"
+          disabled={status === 'loading'}
+          onClick={() => submit('whatsapp')}
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 text-sm sm:text-base font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851] disabled:opacity-50"
+        >
+          <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
+          <span>Book via WhatsApp</span>
+        </button>
+        <a
+          href={telHref}
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-red-600 px-5 text-sm sm:text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+        >
+          <Phone className="size-4 sm:size-5 shrink-0 fill-current" aria-hidden="true" />
+          <span>Call Now</span>
+        </a>
       </div>
 
       <div className="mt-6 flex items-start gap-2.5 rounded-xl bg-mist px-4 py-3 text-caption text-muted">

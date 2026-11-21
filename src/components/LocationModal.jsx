@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { AnimatePresence, m } from 'framer-motion'
 import { BadgeCheck, Check, Clock, IndianRupee, MapPin, X } from 'lucide-react'
-import { cities, resolveLocationSlug } from '@/data/locations'
+import { cities, cityPath, resolveLocationSlug } from '@/data/locations'
 import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import { siteConfig } from '@/config/siteConfig'
 import { cn } from '@/utils/cn'
@@ -14,6 +14,7 @@ const FOCUSABLE = 'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1
 export default function LocationModal() {
   const { modalOpen, closeModal, selectCity, citySlug } = useSelectedLocation()
   const { pathname } = useLocation()
+  const navigate = useNavigate()
   const pageCity = resolveLocationSlug(pathname.replace(/^\/|\/$/g, ''))?.city?.slug || null
   const [choice, setChoice] = useState(null)
   const dialogRef = useRef(null)
@@ -159,7 +160,12 @@ export default function LocationModal() {
                   size="lg"
                   className="w-full"
                   disabled={!choice}
-                  onClick={() => choice && selectCity(choice)}
+                  onClick={() => {
+                    if (choice) {
+                      selectCity(choice)
+                      navigate(cityPath(choice))
+                    }
+                  }}
                 >
                   Continue to Website
                 </Button>

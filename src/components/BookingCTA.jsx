@@ -22,13 +22,27 @@ export default function BookingCTA({ cityName, bookingTo }) {
               <h2 id="cta-title" className="text-h1 !text-white">{cityName ? `Need a Doctor at Home in ${cityName}?` : 'Need a Doctor at Home?'}</h2>
               <p className="mt-3 max-w-lg text-base text-white/80">Get professional healthcare without travelling to a clinic.</p>
               <ul className="mt-6 flex flex-wrap gap-3">
-                <li className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-sm font-semibold text-navy"><IndianRupee className="size-4" aria-hidden="true" />Starting at {siteConfig.priceLabel}</li>
+                <li className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-sm font-bold text-navy"><IndianRupee className="size-4" aria-hidden="true" />₹998 Consult • 5,000+ Visits</li>
                 <li className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold"><Clock className="size-4" aria-hidden="true" />Available 24/7</li>
               </ul>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button to={to} size="lg" icon={CalendarCheck}>Book a Home Visit</Button>
-                <Button href={telHref} variant="light" size="lg" icon={Phone}>Call Now</Button>
-                <Button href={whatsappHref(defaultWhatsAppMessage(name))} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
+                <a
+                  href={telHref}
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-red-600 px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+                >
+                  <Phone className="size-5 shrink-0 fill-current" aria-hidden="true" />
+                  <span>Call Now</span>
+                </a>
+                <a
+                  href={whatsappHref(defaultWhatsAppMessage(name))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+                >
+                  <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
+                  <span>WhatsApp</span>
+                </a>
               </div>
               {name ? (
                 <p className="mt-5 flex items-center gap-2 text-sm text-white/75"><MapPin className="size-4 text-gold" aria-hidden="true" />Requests for {name} are confirmed by our team before the visit.</p>

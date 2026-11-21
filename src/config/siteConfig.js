@@ -29,8 +29,9 @@ export const siteConfig = {
     placeholder: true,
   },
 
-  startingPrice: 699,
-  priceLabel: '₹699',
+  startingPrice: 998,
+  priceLabel: '₹998',
+  trustLine: '₹998 Consult • 5,000+ Visits',
   hours: 'Bookings open 24/7',
 
   /**

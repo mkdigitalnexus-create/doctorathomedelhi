@@ -1,7 +1,8 @@
 import { Stethoscope, Brain, HeartPulse, Bone, Baby, Activity, HeartHandshake, Wind, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { BOOKING_PATH } from '@/data/navigation'
-import { telHref, whatsappHref } from '@/utils/contact'
+import { defaultWhatsAppMessage, telHref, whatsappHref } from '@/utils/contact'
+import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import Container from '@/components/ui/Container'
 import Button from '@/components/ui/Button'
 import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
@@ -58,19 +59,31 @@ export const specialties = [
 ]
 
 export default function DoctorsSection({ showLink = true, headingAs: HeadingTag = 'h2', className = 'bg-mist py-14 md:py-20' }) {
+  const { city } = useSelectedLocation()
+
   return (
     <section aria-labelledby="specialists-title" className={className}>
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow mb-3 inline-flex items-center gap-2 text-brand-dark">
-            <span className="h-0.5 w-6 rounded-full bg-action" aria-hidden="true" />
+          {/* Trust Badge */}
+          <div className="mb-3.5 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3.5 py-1.5 text-xs sm:text-sm font-bold text-emerald-800 shadow-xs">
+            <span className="flex size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+            <span>₹998 Consult • 5,000+ Visits</span>
+          </div>
+
+          <p className="eyebrow mb-3 block text-brand-dark">
+            <span className="h-0.5 w-6 rounded-full bg-action inline-block mr-2" aria-hidden="true" />
             Specialist Doctor Consultations
           </p>
           <HeadingTag id="specialists-title" className="text-h2 font-bold text-navy leading-tight sm:text-3xl md:text-4xl">
-            Consult Top Hospital&apos;s Specialist Doctors for all Health Concerns Related to
+            {city
+              ? `Consult Top Specialist Doctors at Home in ${city.name}`
+              : "Consult Top Hospital's Specialist Doctors for all Health Concerns Related to"}
           </HeadingTag>
           <p className="mt-3.5 text-base text-muted sm:text-lg">
-            Experienced MBBS / MD doctors visiting you at home across Delhi NCR for comprehensive care and consultation.
+            {city
+              ? `Experienced MBBS / MD doctors visiting you at home across ${city.name} for comprehensive care and consultation.`
+              : 'Experienced MBBS / MD doctors visiting you at home across Delhi NCR for comprehensive care and consultation.'}
           </p>
         </div>
 
@@ -98,20 +111,25 @@ export default function DoctorsSection({ showLink = true, headingAs: HeadingTag 
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button href={telHref} variant="outline" size="lg" icon={Phone}>
-            Call Doctor
-          </Button>
-          <Button
-            href={whatsappHref('Hello Doctor At Home, I want to consult a specialist doctor at home. Please share availability.')}
-            variant="care"
-            size="lg"
-            icon={WhatsAppIcon}
+          <a
+            href={telHref}
+            className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-red-600 px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
           >
-            Book WhatsApp
-          </Button>
+            <Phone className="size-5 shrink-0 fill-current" aria-hidden="true" />
+            <span>Call Doctor</span>
+          </a>
+          <a
+            href={whatsappHref(defaultWhatsAppMessage(city?.name))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+          >
+            <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
+            <span>Book WhatsApp</span>
+          </a>
           {showLink ? (
-            <Button to={BOOKING_PATH} size="lg">
-              Book a Home Visit
+            <Button to={city ? `${BOOKING_PATH}?city=${city.slug}` : BOOKING_PATH} size="lg" className="w-full sm:w-auto">
+              {city ? `Book a Visit in ${city.name}` : 'Book a Home Visit'}
             </Button>
           ) : null}
         </div>

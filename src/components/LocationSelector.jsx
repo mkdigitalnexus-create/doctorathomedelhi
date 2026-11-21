@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Check, ChevronDown, MapPin } from 'lucide-react'
-import { cities } from '@/data/locations'
+import { cities, cityPath } from '@/data/locations'
 import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import { cn } from '@/utils/cn'
 
@@ -8,6 +9,7 @@ function Dropdown({ variant = 'header', className }) {
   const { city, citySlug, selectCity } = useSelectedLocation()
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (!open) return undefined
@@ -20,6 +22,12 @@ function Dropdown({ variant = 'header', className }) {
       document.removeEventListener('keydown', onKey)
     }
   }, [open])
+
+  const handleSelect = (slug) => {
+    selectCity(slug)
+    setOpen(false)
+    navigate(cityPath(slug))
+  }
 
   const isBar = variant === 'bar'
 
@@ -62,7 +70,7 @@ function Dropdown({ variant = 'header', className }) {
                   <button
                     type="button"
                     aria-current={c.slug === citySlug ? 'true' : undefined}
-                    onClick={() => { selectCity(c.slug); setOpen(false) }}
+                    onClick={() => handleSelect(c.slug)}
                     className={cn(
                       'flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-sm font-medium text-ink transition-colors hover:bg-mist',
                       c.slug === citySlug && 'bg-brand/10 font-semibold text-navy',
@@ -86,6 +94,13 @@ function Dropdown({ variant = 'header', className }) {
 
 function Chips({ className }) {
   const { citySlug, selectCity } = useSelectedLocation()
+  const navigate = useNavigate()
+
+  const handleSelect = (slug) => {
+    selectCity(slug)
+    navigate(cityPath(slug))
+  }
+
   return (
     <div role="group" aria-label="Choose your location" className={cn('flex flex-wrap gap-2', className)}>
       {cities.map((c) => (
@@ -93,7 +108,7 @@ function Chips({ className }) {
           key={c.slug}
           type="button"
           aria-pressed={c.slug === citySlug}
-          onClick={() => selectCity(c.slug)}
+          onClick={() => handleSelect(c.slug)}
           className={cn(
             'inline-flex h-10 items-center gap-1.5 rounded-full border px-4 text-sm font-semibold transition-colors',
             c.slug === citySlug ? 'border-navy bg-navy text-white' : 'border-line bg-white text-navy hover:border-brand',

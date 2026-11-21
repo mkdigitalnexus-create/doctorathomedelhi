@@ -74,9 +74,23 @@ export default function Booking() {
             <div className="rounded-2xl border border-line bg-mist p-6">
               <h2 className="text-h3">Prefer to talk?</h2>
               <p className="mt-1.5 text-sm text-muted">Bookings are open 24/7.</p>
-              <div className="mt-4 grid gap-3">
-                <Button href={telHref} variant="secondary" icon={Phone}>{siteConfig.phone.display}</Button>
-                <Button href={whatsappHref(defaultWhatsAppMessage(city?.name))} variant="care" icon={WhatsAppIcon}>WhatsApp us</Button>
+              <div className="mt-4 grid gap-2.5">
+                <a
+                  href={telHref}
+                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-4 text-sm font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+                >
+                  <Phone className="size-4 shrink-0 fill-current" aria-hidden="true" />
+                  <span>Call {siteConfig.phone.display}</span>
+                </a>
+                <a
+                  href={whatsappHref(defaultWhatsAppMessage(city?.name))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 text-sm font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+                >
+                  <WhatsAppIcon className="size-4 shrink-0" aria-hidden="true" />
+                  <span>WhatsApp Us</span>
+                </a>
               </div>
             </div>
             <EmergencyNote />

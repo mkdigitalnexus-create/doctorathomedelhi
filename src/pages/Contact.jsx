@@ -47,8 +47,22 @@ export default function Contact() {
         subtitle="Call, message us on WhatsApp or request a callback. We will help you check availability for a doctor home visit at your address."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button href={telHref} size="lg" icon={Phone}>Call {siteConfig.phone.display}</Button>
-          <Button href={whatsappHref(defaultWhatsAppMessage(city?.name))} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
+          <a
+            href={telHref}
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-red-600 px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+          >
+            <Phone className="size-5 shrink-0 fill-current" aria-hidden="true" />
+            <span>Call {siteConfig.phone.display}</span>
+          </a>
+          <a
+            href={whatsappHref(defaultWhatsAppMessage(city?.name))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+          >
+            <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
+            <span>WhatsApp Us</span>
+          </a>
         </div>
       </PageHero>
 

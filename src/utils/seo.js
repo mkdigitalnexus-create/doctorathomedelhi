@@ -63,7 +63,7 @@ export const organizationSchema = () => {
     logo: absoluteUrl(siteConfig.brand.logo),
     image: absoluteUrl(siteConfig.ogImage),
     description:
-      'Doctor home visit service in Delhi NCR. Qualified MBBS/MD doctors visit patients at home. Bookings open 24/7, starting at ₹699.',
+      'Doctor home visit service in Delhi NCR. Qualified MBBS/MD doctors visit patients at home. ₹998 Consult • 5,000+ Visits. Bookings open 24/7.',
     priceRange: `From ${siteConfig.priceLabel}`,
     areaServed: cities.map((c) => ({ '@type': 'City', name: c.name })),
     openingHoursSpecification: {

@@ -5,7 +5,7 @@ import { getService, services, servicePath } from '@/data/services'
 import { cities, cityPath } from '@/data/locations'
 import { BOOKING_PATH } from '@/data/navigation'
 import { breadcrumbSchema, faqSchema, serviceSchema } from '@/utils/seo'
-import { telHref, whatsappHref } from '@/utils/contact'
+import { defaultWhatsAppMessage, telHref, whatsappHref } from '@/utils/contact'
 import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import SEO from '@/components/SEO'
 import PageHero from '@/components/PageHero'
@@ -107,12 +107,26 @@ export default function ServiceDetail() {
           <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start" aria-label="Booking options">
             <div className="rounded-2xl border border-line bg-white p-6">
               <p className="text-caption text-muted">Starting consultation fee</p>
-              <p className="text-3xl font-bold text-navy">{siteConfig.priceLabel}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-navy">₹998 Consult • 5,000+ Visits</p>
               <p className="mt-1 text-caption text-muted">Final details are confirmed when your appointment is arranged.</p>
-              <div className="mt-5 grid gap-3">
+              <div className="mt-5 grid gap-2.5">
                 <Button to={bookingTo} icon={CalendarCheck}>Book This Service</Button>
-                <Button href={whatsappHref(`Hello Doctor At Home, I would like to arrange: ${service.title}. Please share availability.`)} variant="care" icon={WhatsAppIcon}>WhatsApp</Button>
-                <Button href={telHref} variant="outline" icon={Phone}>Call Now</Button>
+                <a
+                  href={telHref}
+                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-red-600 px-4 text-sm font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+                >
+                  <Phone className="size-4 shrink-0 fill-current" aria-hidden="true" />
+                  <span>Call Doctor Now</span>
+                </a>
+                <a
+                  href={whatsappHref(defaultWhatsAppMessage())}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 text-sm font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+                >
+                  <WhatsAppIcon className="size-4 shrink-0" aria-hidden="true" />
+                  <span>Book on WhatsApp</span>
+                </a>
               </div>
             </div>
             <EmergencyNote />

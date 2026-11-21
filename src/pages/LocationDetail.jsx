@@ -28,7 +28,7 @@ export default function LocationDetail({ city }) {
   const price = siteConfig.priceLabel
 
   const facts = [
-    { icon: IndianRupee, title: `Starting at ${price}`, text: `Doctor home visits in ${city.name} start at ${price}. Final details are confirmed when you book.`, tone: 'bg-gold/25 text-navy' },
+    { icon: IndianRupee, title: '₹998 Consult • 5,000+ Visits', text: `Doctor home visits across ${city.name} start at ₹998 with over 5,000+ completed home visits.`, tone: 'bg-emerald-50 text-emerald-800' },
     { icon: Clock, title: 'Bookings open 24/7', text: 'Call or message at any hour. Visit timing depends on doctor availability near your address.', tone: 'bg-care/10 text-care-dark' },
     { icon: BadgeCheck, title: 'Verified MBBS / MD doctors', text: `Qualified doctors visit your ${city.name} home for a full consultation.`, tone: 'bg-brand/10 text-brand-dark' },
   ]
@@ -76,8 +76,22 @@ export default function LocationDetail({ city }) {
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button to={bookingTo} size="lg" icon={CalendarCheck}>Book a Home Visit in {city.name}</Button>
-          <Button href={telHref} variant="outline" size="lg" icon={Phone}>Call Now</Button>
-          <Button href={whatsappHref(defaultWhatsAppMessage(city.name))} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
+          <a
+            href={telHref}
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-red-600 px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+          >
+            <Phone className="size-5 shrink-0 fill-current" aria-hidden="true" />
+            <span>Call Now</span>
+          </a>
+          <a
+            href={whatsappHref(defaultWhatsAppMessage(city.name))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+          >
+            <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
+            <span>WhatsApp</span>
+          </a>
         </div>
       </PageHero>
 

@@ -4,6 +4,7 @@ import { homeFaqs } from '@/data/faqs'
 import { cities, cityPath } from '@/data/locations'
 import { servicePath } from '@/data/services'
 import { faqSchema, organizationSchema, websiteSchema } from '@/utils/seo'
+import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import SEO from '@/components/SEO'
 import Hero from '@/components/Hero'
 import TrustSection from '@/components/TrustSection'
@@ -53,13 +54,16 @@ function SeoCopy() {
 }
 
 export default function Home() {
+  const { city } = useSelectedLocation()
+  const faqs = city?.faqs ? [...city.faqs, ...homeFaqs.slice(0, 4)] : homeFaqs
+
   return (
     <>
       <SEO
-        title={`Doctor at Home Delhi NCR | 24/7 Home Visit Starting ${siteConfig.priceLabel}`}
-        description={`Book a verified MBBS/MD doctor at home across Delhi NCR. Doctor home visits available 24/7, starting at ${siteConfig.priceLabel}. Call or WhatsApp to check availability.`}
+        title={city ? `Doctor at Home in ${city.name} | 24/7 Home Visit Starting ${siteConfig.priceLabel}` : `Doctor at Home Delhi NCR | 24/7 Home Visit Starting ${siteConfig.priceLabel}`}
+        description={city ? `Book a verified MBBS/MD doctor at home in ${city.name}. Home visits available 24/7, starting at ${siteConfig.priceLabel}. Call or WhatsApp to check availability.` : `Book a verified MBBS/MD doctor at home across Delhi NCR. Doctor home visits available 24/7, starting at ${siteConfig.priceLabel}. Call or WhatsApp to check availability.`}
         path="/"
-        jsonLd={[organizationSchema(), websiteSchema(), faqSchema(homeFaqs)]}
+        jsonLd={[organizationSchema(), websiteSchema(), faqSchema(faqs)]}
       />
       <Hero />
       <TrustSection />
@@ -69,7 +73,7 @@ export default function Home() {
       <DoctorsSection />
       <LocationsSection />
       <BookingCTA />
-      <FAQSection items={homeFaqs} description="Clear answers about booking, availability, qualifications and fees." />
+      <FAQSection items={faqs} description={city ? `Clear answers about doctor home visits in ${city.name}, availability and fees.` : 'Clear answers about booking, availability, qualifications and fees.'} />
       <SeoCopy />
     </>
   )

@@ -5,7 +5,7 @@ import { cityPath, localitiesOf, localityPath } from '@/data/locations'
 import { services, servicePath } from '@/data/services'
 import { BOOKING_PATH } from '@/data/navigation'
 import { breadcrumbSchema, faqSchema, serviceSchema } from '@/utils/seo'
-import { telHref, whatsappHref } from '@/utils/contact'
+import { defaultWhatsAppMessage, telHref, whatsappHref } from '@/utils/contact'
 import SEO from '@/components/SEO'
 import PageHero from '@/components/PageHero'
 import BookingCTA from '@/components/BookingCTA'
@@ -62,8 +62,22 @@ export default function LocalityDetail({ locality, city }) {
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button to={bookingTo} size="lg" icon={CalendarCheck}>Book a Visit in {locality.name}</Button>
-          <Button href={telHref} variant="outline" size="lg" icon={Phone}>Call Now</Button>
-          <Button href={whatsappHref(`Hello Doctor At Home, I would like to arrange a doctor home visit in ${locality.name}, ${city.name}. Please share availability.`)} variant="care" size="lg" icon={WhatsAppIcon}>WhatsApp</Button>
+          <a
+            href={telHref}
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-red-600 px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-red-700 active:bg-red-800"
+          >
+            <Phone className="size-5 shrink-0 fill-current" aria-hidden="true" />
+            <span>Call Now</span>
+          </a>
+          <a
+            href={whatsappHref(defaultWhatsAppMessage(`${locality.name}, ${city.name}`))}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 text-base font-bold text-white shadow-xs transition-colors hover:bg-[#20ba5a] active:bg-[#1da851]"
+          >
+            <WhatsAppIcon className="size-5 shrink-0" aria-hidden="true" />
+            <span>WhatsApp</span>
+          </a>
         </div>
       </PageHero>
 

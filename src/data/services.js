@@ -2,7 +2,7 @@
  * Service catalogue. `icon` is a lucide-react icon name resolved in components/ui/Icon.jsx
  * Physiotherapy is intentionally not offered.
  */
-const PRICE = '₹699'
+const PRICE = '₹998'
 
 export const services = [
   {

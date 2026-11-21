@@ -1,9 +1,10 @@
 import { CalendarCheck, Clock, Home, IndianRupee, ShieldCheck } from 'lucide-react'
 import { siteConfig } from '@/config/siteConfig'
+import { useSelectedLocation } from '@/hooks/useSelectedLocation'
 import Container from '@/components/ui/Container'
 import SectionHeading from '@/components/ui/SectionHeading'
 
-const features = [
+const defaultFeatures = [
   { icon: ShieldCheck, title: 'Verified MBBS/MD doctors', text: 'Consultations are handled by qualified doctors, with verified profiles shared as credentials are confirmed.', tone: 'bg-brand/10 text-brand-dark' },
   { icon: Clock, title: '24/7 booking availability', text: 'Call, message or send a request at any hour. Our team confirms the earliest visit window available.', tone: 'bg-care/10 text-care-dark' },
   { icon: Home, title: 'Healthcare at home', text: 'No travel, no waiting room. Patients are seen in a familiar, comfortable setting with family around.', tone: 'bg-action/10 text-action-dark' },
@@ -12,6 +13,22 @@ const features = [
 ]
 
 export default function WhyChoose() {
+  const { city } = useSelectedLocation()
+
+  const title = city?.whyHeading || 'Why Choose Doctor At Home?'
+  const description = city
+    ? `A calm, reliable way to see a qualified doctor at your ${city.name} residence when travelling to a clinic is hard.`
+    : 'A calm, reliable way to see a qualified doctor when travelling to a clinic is hard.'
+
+  const features = city?.whyPoints
+    ? city.whyPoints.map((p, i) => ({
+        icon: i === 0 ? Clock : i === 1 ? Home : ShieldCheck,
+        title: p.title,
+        text: p.text,
+        tone: i === 0 ? 'bg-care/10 text-care-dark' : i === 1 ? 'bg-action/10 text-action-dark' : 'bg-brand/10 text-brand-dark',
+      }))
+    : defaultFeatures
+
   return (
     <section aria-labelledby="why-title" className="bg-mist py-14 md:py-20">
       <Container className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
@@ -29,7 +46,7 @@ export default function WhyChoose() {
         </div>
 
         <div>
-          <SectionHeading id="why-title" align="left" eyebrow="Why Choose Us" title="Why Choose Doctor At Home?" description="A calm, reliable way to see a qualified doctor when travelling to a clinic is hard." />
+          <SectionHeading id="why-title" align="left" eyebrow={city ? `Why ${city.name} Residents Choose Us` : 'Why Choose Us'} title={title} description={description} />
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {features.map(({ icon: I, title, text, tone }, i) => (
               <li key={title} className={`rounded-2xl border border-line bg-white p-5 ${i === features.length - 1 ? 'sm:col-span-2' : ''}`}>
