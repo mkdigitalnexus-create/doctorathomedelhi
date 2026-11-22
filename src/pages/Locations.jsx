@@ -19,7 +19,7 @@ export default function Locations() {
     <>
       <SEO
         title={`Doctor Home Visit Locations in Delhi NCR | From ${siteConfig.priceLabel}`}
-        description={`Doctor at home in Delhi, Gurgaon, Noida, Greater Noida, Ghaziabad and Faridabad. Find your city and neighbourhood, available 24/7 from ${siteConfig.priceLabel}. Availability confirmed on request.`}
+        description={`Doctor at home in Delhi, Gurgaon, Noida, Greater Noida, Ghaziabad and Faridabad. Available 24/7 from ${siteConfig.priceLabel}. Call: 9625853584.`}
         path="/locations/"
         jsonLd={[breadcrumbSchema(crumbs)]}
       />

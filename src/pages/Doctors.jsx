@@ -23,7 +23,7 @@ export default function Doctors() {
     <>
       <SEO
         title="Our Doctors | ₹699 Consult • 5,000+ Visits | Doctor at Home Delhi NCR"
-        description="Consult top hospital specialist doctors at home across Delhi NCR. Verified MBBS/MD doctors, ₹699 consult, 5,000+ home visits completed. Available 24/7."
+        description="Consult top hospital specialist doctors at home across Delhi NCR. Verified MBBS/MD doctors, ₹699 consult, 5,000+ home visits completed. Available 24/7. Call: 9625853584."
         path="/our-doctors/"
         jsonLd={[breadcrumbSchema(crumbs)]}
       />

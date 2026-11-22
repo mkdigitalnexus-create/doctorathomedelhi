@@ -33,7 +33,7 @@ export default function LocalityDetail({ locality, city }) {
   const nearbyList = (sameRegion.length ? sameRegion : siblings).slice(0, 8)
   const bookingTo = `${BOOKING_PATH}?city=${city.slug}&locality=${locality.slug}`
   const title = `Doctor at Home in ${label} | 24/7 Visit from ${price}`
-  const description = `Book a qualified MBBS/MD doctor at home in ${label}. Home visits available 24/7 from ${price}. Exact availability is confirmed when you request a visit.`
+  const description = `Book a qualified MBBS/MD doctor at home in ${label}. Home visits available 24/7 from ${price}. Call: 9625853584.`
 
   const faqs = [
     { q: `Is a doctor home visit available in ${locality.name}?`, a: `${locality.name} is one of the neighbourhoods we welcome requests from in ${city.name}. Availability depends on your exact address and the time you need the visit, so our team confirms it with you before anything is finalised.` },

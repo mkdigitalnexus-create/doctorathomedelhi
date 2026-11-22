@@ -19,7 +19,7 @@ export const cities = [
     shortDescription:
       'Doctor home visits for colonies and apartments across West, North, East and South Delhi.',
     seoTitle: `Doctor at Home in Delhi | 24/7 Home Visit Starting ${PRICE}`,
-    metaDescription: `Book a qualified MBBS/MD doctor at home in Delhi. Home visit doctor in West, North, East and South Delhi, available 24/7 from ${PRICE}. Call to check availability.`,
+    metaDescription: `Book a qualified MBBS/MD doctor at home in Delhi. Home visit doctor in West, North, East and South Delhi, available 24/7 from ${PRICE}. Call: 9625853584.`,
     h1: 'Doctor at Home in Delhi – Qualified Doctors at Your Doorstep',
     heroSubtitle: `Home visit doctor in Delhi from ${PRICE}. Bookings open 24/7.`,
     intro: [
@@ -56,7 +56,7 @@ export const cities = [
     shortDescription:
       'Home visits for high-rise societies, gated communities and working families in Gurgaon.',
     seoTitle: `Doctor at Home in Gurgaon | 24/7 Home Visit Starting ${PRICE}`,
-    metaDescription: `Book a qualified MBBS/MD doctor at home in Gurgaon. Doctor home visits available 24/7, starting at ${PRICE}. Call to check service availability.`,
+    metaDescription: `Book a qualified MBBS/MD doctor at home in Gurgaon. Doctor home visits available 24/7, starting at ${PRICE}. Call: 9625853584.`,
     h1: 'Doctor at Home in Gurgaon – Qualified Doctors at Your Doorstep',
     heroSubtitle: `Doctor home visit in Gurgaon from ${PRICE}, with bookings open round the clock.`,
     intro: [
@@ -93,7 +93,7 @@ export const cities = [
     shortDescription:
       'Sector-wise home doctor visits for apartments and independent homes across Noida.',
     seoTitle: `Doctor at Home in Noida | 24/7 Home Visit Starting ${PRICE}`,
-    metaDescription: `Looking for a doctor at home in Noida? Book a qualified MBBS/MD doctor home visit in Noida sectors, available 24/7 and starting at ${PRICE}. Call to confirm availability.`,
+    metaDescription: `Looking for a doctor at home in Noida? Book a qualified MBBS/MD doctor home visit in Noida sectors, available 24/7 and starting at ${PRICE}. Call: 9625853584.`,
     h1: 'Doctor at Home in Noida – Qualified Doctors at Your Doorstep',
     heroSubtitle: `Home visit doctor in Noida from ${PRICE} – request any time of day or night.`,
     intro: [
@@ -130,7 +130,7 @@ export const cities = [
     shortDescription:
       'Doctor home visits for Alpha I, Gaur City and other Greater Noida societies.',
     seoTitle: `Doctor at Home in Greater Noida | 24/7 Visit Starting ${PRICE}`,
-    metaDescription: `Book a doctor at home in Greater Noida, including Alpha I and Gaur City. Qualified MBBS/MD doctors, home visits 24/7 from ${PRICE}. Call to check availability.`,
+    metaDescription: `Book a doctor at home in Greater Noida, including Alpha I and Gaur City. Qualified MBBS/MD doctors, home visits 24/7 from ${PRICE}. Call: 9625853584.`,
     h1: 'Doctor at Home in Greater Noida – Qualified Doctors at Your Doorstep',
     heroSubtitle: `Greater Noida home visits from ${PRICE}, with bookings open 24/7.`,
     intro: [
@@ -167,7 +167,7 @@ export const cities = [
     shortDescription:
       'Home doctor visits for Brij Vihar, Sahibabad, Siddharth Vihar and nearby Ghaziabad colonies.',
     seoTitle: `Doctor at Home in Ghaziabad | 24/7 Visit Starting ${PRICE}`,
-    metaDescription: `Qualified MBBS/MD doctor at home in Ghaziabad – Siddharth Vihar, Sahibabad, Brij Vihar and nearby. Home visits available 24/7 from ${PRICE}. Call to confirm availability.`,
+    metaDescription: `Qualified MBBS/MD doctor at home in Ghaziabad – Siddharth Vihar, Sahibabad, Brij Vihar and nearby. Home visits available 24/7 from ${PRICE}. Call: 9625853584.`,
     h1: 'Doctor at Home in Ghaziabad – Qualified Doctors at Your Doorstep',
     heroSubtitle: `Doctor home visit in Ghaziabad from ${PRICE}. Request a visit any hour of the day.`,
     intro: [
@@ -204,7 +204,7 @@ export const cities = [
     shortDescription:
       'Doctor home visits for sectors, NIT and Greater Faridabad neighbourhoods.',
     seoTitle: `Doctor at Home in Faridabad | 24/7 Home Visit Starting ${PRICE}`,
-    metaDescription: `Book an MBBS/MD doctor at home in Faridabad – old Faridabad, NIT, sectors and Greater Faridabad. Home visits available 24/7 from ${PRICE}. Call to check availability.`,
+    metaDescription: `Book an MBBS/MD doctor at home in Faridabad – old Faridabad, NIT, sectors and Greater Faridabad. Home visits available 24/7 from ${PRICE}. Call: 9625853584.`,
     h1: 'Doctor at Home in Faridabad – Qualified Doctors at Your Doorstep',
     heroSubtitle: `Faridabad doctor home visit from ${PRICE}. Bookings open 24/7.`,
     intro: [

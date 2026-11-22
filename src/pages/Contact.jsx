@@ -36,7 +36,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Doctor At Home | Call, WhatsApp or Request a Callback"
-        description={`Talk to the Doctor At Home team about a doctor home visit in Delhi NCR. Call, WhatsApp or request a callback. Bookings open 24/7, starting at ${siteConfig.priceLabel}.`}
+        description={`Talk to the Doctor At Home team about a doctor home visit in Delhi NCR. Bookings open 24/7, starting at ${siteConfig.priceLabel}. Call: 9625853584.`}
         path="/contact/"
         jsonLd={[breadcrumbSchema(crumbs), organizationSchema(), faqSchema(contactFaqs)]}
       />

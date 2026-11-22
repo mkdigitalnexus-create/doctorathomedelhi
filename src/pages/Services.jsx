@@ -15,7 +15,7 @@ export default function Services() {
     <>
       <SEO
         title={`Doctor Home Visit Services in Delhi NCR | From ${siteConfig.priceLabel}`}
-        description={`Explore doctor home visit services across Delhi NCR – general physician, fever, elderly care, child healthcare, BP & diabetes, injections and home blood tests. Starting at ${siteConfig.priceLabel}.`}
+        description={`Explore doctor home visit services across Delhi NCR. Qualified MBBS/MD doctors, 24/7 from ${siteConfig.priceLabel}. Call: 9625853584.`}
         path="/services/"
         jsonLd={[breadcrumbSchema(crumbs)]}
       />

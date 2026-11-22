@@ -13,7 +13,7 @@ export const services = [
     image: '/images/home-visits/doctor-at-doorstep.webp',
     imageAlt: 'Indian doctor with a medical bag being welcomed at the door of a family home',
     seoTitle: `Doctor Home Visit in Delhi NCR | 24/7 Starting ${PRICE}`,
-    seoDescription: `Book a qualified MBBS/MD doctor home visit across Delhi NCR. Available 24/7, starting at ${PRICE}. Call or WhatsApp to check availability.`,
+    seoDescription: `Book a qualified MBBS/MD doctor home visit across Delhi NCR. Available 24/7, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'A doctor home visit brings a qualified MBBS/MD doctor to your door for a complete consultation: the doctor listens to the history, examines the patient, explains what may be going on and recommends next steps.',
       'It is helpful when the patient is unwell, elderly, recovering or simply cannot travel, and when you want the whole family to speak to the doctor in a comfortable setting.',
@@ -33,7 +33,7 @@ export const services = [
     image: '/images/services/general-physician.webp',
     imageAlt: 'General physician consulting an adult patient at a home dining table',
     seoTitle: `General Physician Home Visit in Delhi NCR | From ${PRICE}`,
-    seoDescription: `Book a general physician home visit in Delhi NCR. MBBS/MD doctors for everyday health concerns, available 24/7, starting at ${PRICE}.`,
+    seoDescription: `Book a general physician home visit in Delhi NCR. MBBS/MD doctors for everyday health concerns, available 24/7, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'A general physician is often the right first point of contact for everyday health problems – recurring headaches, tiredness, stomach trouble, body aches, skin complaints and general check-ups.',
       'With a home consultation you can sit down with the doctor without commuting, discuss several concerns in one visit and share your older reports and prescriptions in person.',
@@ -53,7 +53,7 @@ export const services = [
     image: '/images/services/fever-consultation.webp',
     imageAlt: 'Doctor checking the temperature of a young woman resting on a sofa at home',
     seoTitle: `Fever Doctor at Home in Delhi NCR | 24/7 From ${PRICE}`,
-    seoDescription: `Fever and infection consultation at home in Delhi NCR. Qualified MBBS/MD doctors, 24/7 bookings, starting at ${PRICE}. Call to confirm availability.`,
+    seoDescription: `Fever and infection consultation at home in Delhi NCR. Qualified MBBS/MD doctors, 24/7 bookings, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'Fever, sore throat, cough, cold, body ache and stomach infections are among the most common reasons families look for a doctor at short notice – often at night or during weekends.',
       'A home consultation lets the patient rest while the doctor examines them, assesses how unwell they are, and explains what to do next and when to seek urgent hospital care.',
@@ -73,7 +73,7 @@ export const services = [
     image: '/images/services/elderly-care.webp',
     imageAlt: 'Doctor checking the blood pressure of an elderly man while his daughter looks on',
     seoTitle: `Elderly Care Doctor at Home in Delhi NCR | From ${PRICE}`,
-    seoDescription: `Doctor home visits for elderly parents in Delhi NCR. Qualified MBBS/MD doctors, 24/7 bookings, starting at ${PRICE}. Call to check availability.`,
+    seoDescription: `Doctor home visits for elderly parents in Delhi NCR. Qualified MBBS/MD doctors, 24/7 bookings, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'Travelling to a clinic can be tiring, confusing or even risky for senior citizens. An elderly care home visit allows an older family member to be examined where they feel most comfortable, with relatives present to ask questions.',
       'Whether it is a routine review, a new symptom or a follow-up after discharge, the doctor takes time to understand the patient’s history, current medicines and daily routine.',
@@ -93,7 +93,7 @@ export const services = [
     image: '/images/services/child-healthcare.webp',
     imageAlt: 'Doctor examining a young child on his mother’s lap at home',
     seoTitle: `Child Doctor at Home in Delhi NCR | 24/7 From ${PRICE}`,
-    seoDescription: `Book a doctor home visit for your child in Delhi NCR. Qualified MBBS/MD doctors, bookings open 24/7, starting at ${PRICE}.`,
+    seoDescription: `Book a doctor home visit for your child in Delhi NCR. Qualified MBBS/MD doctors, bookings open 24/7, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'Children are often calmer in their own surroundings, with a parent close by. A home consultation spares an unwell child the clinic waiting room and exposure to other infections.',
       'The doctor can assess common childhood illnesses such as fever, cough, colds, stomach upsets and minor complaints, and guide parents on home care and when to seek urgent help.',
@@ -113,7 +113,7 @@ export const services = [
     image: '/images/services/bp-diabetes.webp',
     imageAlt: 'Doctor measuring a patient’s blood pressure at home with a glucometer on the table',
     seoTitle: `BP & Diabetes Doctor at Home in Delhi NCR | From ${PRICE}`,
-    seoDescription: `Blood pressure and diabetes consultation at home across Delhi NCR. MBBS/MD doctors, bookings open 24/7, starting at ${PRICE}.`,
+    seoDescription: `Blood pressure and diabetes consultation at home across Delhi NCR. MBBS/MD doctors, bookings open 24/7, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'High blood pressure and diabetes need regular follow-up, but frequent travel to clinics is difficult for many patients. A home consultation lets the doctor review readings, symptoms and medicines in the patient’s own routine.',
       'The doctor can check blood pressure, discuss recent sugar readings, review reports and explain what the numbers mean for day-to-day care.',
@@ -133,7 +133,7 @@ export const services = [
     image: '/images/services/injections-procedures.webp',
     imageAlt: 'Doctor in gloves preparing a sterile syringe from a medical kit at home',
     seoTitle: `Injection & Medical Procedures at Home in Delhi NCR`,
-    seoDescription: `Doctor-prescribed injections and simple procedures at home across Delhi NCR. Qualified professionals, bookings open 24/7, starting at ${PRICE}.`,
+    seoDescription: `Doctor-prescribed injections and simple procedures at home across Delhi NCR. Qualified professionals, bookings open 24/7, starting at ${PRICE}. Call: 9625853584.`,
     description: [
       'If a doctor has prescribed an injection or a simple procedure, a home visit can save the patient a trip – particularly when they are recovering, elderly or find travelling uncomfortable.',
       'Please keep your prescription ready. Procedures are carried out only as prescribed and only when the doctor considers it safe to do so at home.',
@@ -153,7 +153,7 @@ export const services = [
     image: '/images/services/blood-test.webp',
     imageAlt: 'Healthcare professional collecting a blood sample from a patient at home',
     seoTitle: `Home Blood Test Sample Collection in Delhi NCR | Doctor at Home`,
-    seoDescription: `Arrange blood test sample collection at home across Delhi NCR. Bookings open 24/7 – call or WhatsApp to confirm availability and details.`,
+    seoDescription: `Arrange blood test sample collection at home across Delhi NCR. Bookings open 24/7 – Call: 9625853584.`,
     description: [
       'When a doctor recommends blood tests, collecting the sample at home spares patients who are unwell, elderly or short of time a trip to a diagnostic centre.',
       'Our team arranges sample collection at your address on request. Availability, test list and turnaround times depend on the arrangement for your location and are confirmed when you book.',

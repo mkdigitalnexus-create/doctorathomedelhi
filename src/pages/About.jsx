@@ -22,7 +22,7 @@ export default function About() {
     <>
       <SEO
         title="About Doctor At Home | Home Doctor Visits in Delhi NCR"
-        description="Doctor At Home brings qualified MBBS/MD doctors to patients’ homes across Delhi NCR. Learn how our home visit service works and what we stand for."
+        description="Doctor At Home brings qualified MBBS/MD doctors to homes across Delhi NCR. Bookings open 24/7 from ₹699. Call: 9625853584."
         path="/about-us/"
         jsonLd={[breadcrumbSchema(crumbs), organizationSchema()]}
       />
