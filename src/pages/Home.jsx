@@ -62,7 +62,7 @@ export default function Home() {
     <>
       <SEO
         title={city ? `Rs 699 Doctor At Home in ${city.name}, 24/7 DELHI NCR` : 'Rs 699 Doctor At Home, 24/7 DELHI NCR'}
-        description={city ? `Book a verified MBBS/MD doctor at home in ${city.name}. Home visits available 24/7, starting at ${siteConfig.priceLabel}. Call: 9625853584.` : `Book a verified MBBS/MD doctor at home across Delhi NCR. Doctor home visits available 24/7, starting at ${siteConfig.priceLabel}. Call: 9625853584.`}
+        description={city ? `Doctor At Home in ${city.name} (Delhi NCR) in 15 min, 24/7. Qualified MBBS / MD doctor home visit starting at Rs 699. Phone no: 9625853584.` : 'Doctor At Home Delhi NCR in 15 min, 24/7. Qualified MBBS / MD doctor home visit starting at Rs 699. Phone no: 9625853584.'}
         path="/"
         jsonLd={[organizationSchema(), websiteSchema(), faqSchema(faqs)]}
       />

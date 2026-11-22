@@ -27,7 +27,7 @@ export default function Booking() {
     <>
       <SEO
         title={`Book a Doctor at Home in Delhi NCR | Home Visit From ${siteConfig.priceLabel}`}
-        description={`Arrange a doctor home visit in Delhi NCR. Share your details or call our medical team. Available 24/7 from ${siteConfig.priceLabel}. Call: 9625853584.`}
+        description="Doctor At Home Delhi NCR in 15 min, 24/7. Qualified MBBS / MD doctor home visit starting at Rs 699. Phone no: 9625853584."
         path="/book-home-doctor/"
         jsonLd={[breadcrumbSchema(crumbs), faqSchema(bookingFaqs)]}
       />
