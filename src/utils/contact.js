@@ -7,10 +7,10 @@ export function whatsappHref(message = '') {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base
 }
 
-export const defaultWhatsAppMessage = (areaName = '') => {
+export const defaultWhatsAppMessage = () => {
   const lines = [
     'Hi, I need a doctor home visit.',
-    `My area: ${areaName || ''}`,
+    'My area: ',
     'My symptoms are: ',
     'Age : ',
   ]
@@ -19,11 +19,10 @@ export const defaultWhatsAppMessage = (areaName = '') => {
 
 /** Build a WhatsApp message from booking-form data. Nothing here is stored. */
 export function buildBookingMessage(data, { type = 'booking' } = {}) {
-  const area = data.cityName || data.locality || ''
   const lines = [
     'Hi, I need a doctor home visit.',
     `Mobile: +91 ${data.mobile || ''}`,
-    `My area: ${area}`,
+    'My area: ',
     'My symptoms are: ',
     'Age : ',
   ]
